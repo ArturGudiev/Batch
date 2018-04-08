@@ -18,10 +18,15 @@ if "%1"=="downloads" goto downloads
 if "%1"=="" goto EMPTY
 if "%1"=="down" goto downloads
 if "%1"=="al" goto aliases
+if "%1"=="ali" goto aliases
 goto end
 
-echo in aliases
-start explorer C:\Programming\Batch\Aliases
+:aliases
+se C:\Programming\Batch\Aliases
+goto end
+
+:EMPTY
+start explorer 
 goto end
 
 :downloads
