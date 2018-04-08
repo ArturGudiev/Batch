@@ -1,0 +1,11 @@
+@echo off
+
+if "%1"=="c" goto CD
+
+start explorer %*
+goto end
+
+:CD
+start explorer %cd%
+
+:END

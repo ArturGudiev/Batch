@@ -1,0 +1,161 @@
+@echo off
+
+
+set nl=^& echo.
+
+if "%1"=="asupwd" goto ApolloSuperUser
+if "%1"=="enasupwd" goto EncodeApolloSuperUserPwd
+if "%1"=="csri" goto ClusterStatusReportId
+if "%1"=="q" goto QUERY1
+if "%1"=="q2" goto QUERY2
+if "%1"=="deploy" goto DEPLOY
+if "%1"=="filer" goto FILER
+if "%1"=="c" goto CDIR
+if "%1"=="-h" goto help
+if "%1"=="--help" goto help
+if "%1"=="mvna" goto mvnagent
+if "%1"=="p" goto pwd
+if "%1"=="ip" goto ip
+if "%1"=="qa" goto qa
+if "%1"=="share" goto share
+if "%1"=="letter" goto letter
+if "%1"=="mail" goto mail
+if "%1"=="pwd" goto pwd
+if "%1"=="mypwd" goto mypwd
+
+if "%1"=="rule" goto rule
+if "%1"=="r" goto rule
+if "%1"=="g" goto DEUTCH
+if "%1"=="e" goto e
+if "%1"=="bb" goto blackboard
+if "%1"=="silent1" goto silent1
+if "%1"=="sil1" goto silent1
+if "%1"=="silent2" goto silent2
+if "%1"=="sil2" goto silent2
+
+if "%1"=="bc" goto batchcondition
+if "%1"=="chpwd" goto CHROMEPWD
+if "%1"=="oninit" goto OnInit
+goto end
+
+:OnInit
+cc import {OnInit} from '@angular/core';
+echo import {OnInit} from '@angular/core';
+goto end
+
+:CHROMEPWD
+cc chrome://settings/passwords
+goto end
+
+:HELP
+echo. 
+echo 	asupwd 		-- Copy ApolloSuperUser default password to clipboard
+echo 	csri 		-- Copy Cluster status report id to clipboard
+echo 	q, q2		-- queries
+echo 	mvna		--	mvn command for agent_errors
+echo 	filer		--	filer status
+echo 	qa			-- folder in QA
+echo 	share		-- share folder in 628
+
+goto end
+
+:batchcondition
+cc if "%%1"=="%2" goto %2
+goto end
+
+:SILENT1 
+cc %2.exe -r %2.properties 
+echo %2.exe -r %2.properties 
+goto end
+
+:SILENT2
+cc %2.exe -i silent -f %2.properties 
+goto end
+
+:BLACKBOARD
+cc ju9zi9Ej
+goto end
+
+:EncodeApolloSuperUserPwd
+cc Zkn6iucEmYWjB+TcqDxD3Byw5PwQUFbF+mwqsZTMVAk\=
+goto end
+
+:MYPWD
+cc Passw0rd!
+goto end
+
+:E
+сс ё
+goto end
+
+
+
+:MAIL
+cc "Artur.Gudiev@emc.com"
+goto end
+
+:RULE
+cc "if "%%1"=="%2" goto %2"
+goto end
+
+:LETTER
+chcp 65001
+echo | set /p=æ| clip
+goto end
+
+:QA
+echo | set/p=\\10.98.60.38\qa\Temp\Artur| \\10.98.60.38\qa\Temp\Arturclip
+goto end
+
+:SHARE
+echo | set /p=\\10.98.62.8\628-share| clip
+goto end
+
+:IP
+echo | set /p=10.77.4.74| clip
+goto end
+
+:PWD
+	if "%2"=="hash" goto HASH_PWD
+	if "%2"=="h" goto HASH_PWD
+cc Serverg0d! 
+goto end 
+
+:HASH_PWD
+cc HP1CD1B8C59E9951E2A^|321D7192570B4B7713E0D6E0284339036CA07E94E6F75E2B861EEE3605B71655
+goto end
+
+:MVNAGENT
+echo | set /p=mvn clean install -Pwin-x86_64| clip
+goto end
+
+:CDIR
+echo | set /p=%cd%| clip
+goto end
+
+:DEPLOY 
+echo | set /p= mvn -U -DDPA.DEPLOY.DIR=C:\EMC\DPA clean install -PDeployServer,DeployUI| clip
+goto end 
+
+:QUERY1
+echo clip first query  %nl%
+echo | set /p=INSERT INTO dpa.agent_errors (f_id, f_agent_id, f_agent_name, f_endtime, f_module, f_node_id, f_starttime, f_sub_name, f_invalidationtime,f_wysdm_server,f_error_id,f_error_msg,f_request_id) SELECT f_id, f_agent_id, f_agent_name, f_endtime, f_module, f_node_id, f_starttime, f_sub_name, f_invalidationtime,'local_wysdm','25005','Agent responce is failed',f_request_id FROM dpa.agent_status; | clip
+goto end
+
+:ApolloSuperUser
+echo | set /p=3g1;23#6hFd 05(}c8/F5rB2lL1J79| clip
+goto end
+
+:ClusterStatusReportId
+echo | set /p=ef145bdd-f690-41b1-8c99-16b624ee1cf7| clip
+goto end
+
+:PM
+start https://trello.com/b/q1SsfrNe/work
+goto end
+
+:FILER
+echo | set /p=\\dpa-filer.datadomain.com\CIBuilds\dpa| clip
+goto end
+
+:END

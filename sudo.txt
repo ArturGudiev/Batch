@@ -1,0 +1,2 @@
+@echo off
+runas /noprofile /user:Administrator cmd 
