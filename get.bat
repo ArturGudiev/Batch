@@ -36,6 +36,11 @@ if "%1"=="sil2" goto silent2
 if "%1"=="bc" goto batchcondition
 if "%1"=="chpwd" goto CHROMEPWD
 if "%1"=="oninit" goto OnInit
+if "%1"=="cpu" goto cpu
+goto end
+
+:cpu
+wmic cpu get loadpercentage
 goto end
 
 :OnInit
@@ -85,7 +90,7 @@ cc Passw0rd!
 goto end
 
 :E
-сс ё
+�?�? ё
 goto end
 
 
@@ -130,7 +135,7 @@ echo | set /p=mvn clean install -Pwin-x86_64| clip
 goto end
 
 :CDIR
-echo | set /p=%cd%| clip
+echo | set /p=%cd%\%2| clip
 goto end
 
 :DEPLOY 

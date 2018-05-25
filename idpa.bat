@@ -37,7 +37,15 @@ if "%1"=="sil" goto SILENT_INSTALL
 if "%1"=="make_silent" goto MAKE_SILENT
 if "%1"=="ms" goto MAKE_SILENT
 if "%1"=="dpaagent" goto dpaagent
+if "%1"=="ui" goto ui
 
+goto end
+
+:UI
+	if "%2"=="+" (
+		o uid
+		npm start
+	)
 goto end
 
 :DPAAGENT
@@ -81,7 +89,17 @@ goto end
 
 :APP 
 	if "%2"=="+" goto APP_START
+	if "%2"=="++" goto APP_START_PF
 	if "%2"=="-" goto APP_STOP
+	
+	if "%2"=="--" goto APP_STOP_PF
+	:APP_START_PF
+		echo starting agent in program files
+		@call bb
+		@call dpa app start
+		timeout 1
+		st
+	goto end
 	
 	:APP_START 
 		echo starting app
@@ -96,6 +114,10 @@ goto end
 		timeout 1
 		st
 	goto end
+	
+	:APP_STOP_PF
+	
+	goto end 
 goto end
 
 :DS

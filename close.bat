@@ -16,11 +16,27 @@ if "%1"=="skype" goto skype
 if "%1"=="dpa" goto dpa
 if "%1"=="--help" goto help
 
-:HELP
-echo. 
-echo 	p, pu, punto 		-- close punto switcher punto 
-echo 	o, od, onedrive 	-- close onedrive
-echo 	s, syn, synplicity 	-- close synplicity
+
+if "%1"=="ahk" goto autohotkey
+if "%1"=="node" goto node
+if "%1"=="mc" goto mc
+if "%1"=="npm" goto npm
+goto end
+
+:npm
+taskkill /IM node.exe /F
+goto end
+
+:mc
+taskkill /im "McAfee Safe Connect.exe" /F
+goto end
+
+:node
+taskkill /im node.exe /F
+goto end
+
+:autohotkey
+taskkill /im AutoHotkey.exe /F
 goto end
 
 :DPA 

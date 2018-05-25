@@ -14,6 +14,46 @@ if "%1"=="a65" goto agent65
 if "%1"=="dpa" goto dpa
 if "%1"=="wiki" goto WIKI
 if "%1"=="ut" goto util
+if "%1"=="mus" goto music
+if "%1"=="german" goto german
+if "%1"=="de" goto de
+if "%1"=="home" goto home
+if "%1"=="app" goto navapp
+if "%1"=="jade" goto jade
+if "%1"=="ex" goto ex
+if "%1"=="cl" goto classes
+goto end
+
+:classes
+cd C:\Programming\Java\JADE-all-4.5.0\JADE-bin-4.5.0\jade\classes
+goto end
+
+:ex
+cd C:\Programming\Java\JADE-all-4.5.0\examples\jade\src\examples
+goto end
+
+:jade
+cd C:\Programming\Java\JADE-all-4.5.0\JADE-bin-4.5.0\jade"
+goto end
+
+:NAVAPP
+cd "C:\Program Files\EMC\DPA\services\applications\"
+goto end
+
+:home
+cd C:\Users\gudiea"
+goto end
+
+:de
+cd C:\Artur\University\Deutsch"
+goto end
+
+:german
+cd C:\Artur\University\Deutsch"
+goto end
+
+:music
+cd C:\Artur\Music\
 goto end
 
 :util

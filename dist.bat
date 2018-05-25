@@ -1,6 +1,5 @@
 @echo off
 
-set a="AA A A"
 if "%1"=="exp" goto EXP
 if "%1"=="e" goto EXP
 if "%1"=="norm" goto NORM

@@ -19,10 +19,40 @@ if "%1"=="" goto EMPTY
 if "%1"=="down" goto downloads
 if "%1"=="al" goto aliases
 if "%1"=="ali" goto aliases
+if "%1"=="pf" goto ProgramFiles
+if "%1"=="pf86" goto ProgramFiles86
+if "%1"=="german" goto german
+if "%1"=="ex" goto ex
+if "%1"=="cl" goto classes
+if "%1"=="doc" goto doc
+goto end
+
+:doc
+start explorer C:\Programming\Java\JADE-all-4.5.0\doc"
+goto end
+
+:classes
+start explorer C:\Programming\Java\JADE-all-4.5.0\JADE-bin-4.5.0\jade\classes
+goto end
+
+:ex
+start explorer C:\Programming\Java\JADE-all-4.5.0\examples\jade\src\examples
+goto end
+
+:german
+start explorer C:\Artur\University\Deutsch
+goto end
+
+:ProgramFiles86
+start explorer C:\Program Files (x86)
+goto end
+
+:ProgramFiles
+start explorer C:\Program Files
 goto end
 
 :aliases
-se C:\Programming\Batch\Aliases
+start explorer C:\Programming\Batch\Aliases
 goto end
 
 :EMPTY

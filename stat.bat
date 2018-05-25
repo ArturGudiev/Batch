@@ -39,7 +39,34 @@ if "%1"=="maxlike" goto maxlike
 if "%1"=="pval" goto pval
 
 if "%1"=="wilcox" goto wilcox
+if "%1"=="wil" goto wilcox
+if "%1"=="pwil" goto pwilcox
+if "%1"=="pwilcox" goto pwilcox
 if "%1"=="kolmogorov" goto wilcox
+if "%1"=="cap" goto cap
+if "%1"=="ex" goto exam
+if "%1"=="sal" goto salary
+if "%1"=="pair" goto pair
+goto end
+
+:pair
+n+ C:\Programming\R\Stat\src\exam\crabs.data
+goto end
+
+:salary
+ch http://data.princeton.edu/wws509/datasets/#salary
+goto end
+
+:exam
+ch https://compscicenter.ru/learning/assignments/43247/
+goto end
+
+:cap
+ch https://compscicenter.ru/media/slides/math_stat_2014_spring/2014_03_28_math_stat_2014_spring_1.pdf
+goto end
+
+:pwilcox
+start C:\Artur\University\Stat\Resources\pairedwilcox.png
 goto end
 
 :KOLMOGOROV

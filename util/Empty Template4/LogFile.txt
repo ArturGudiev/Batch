@@ -1,0 +1,17 @@
+Source C:\Programming\C#\Empty Template4\Empty Template4 Dest C:\Programming\C#\Empty Template4\Architecture
+itemOp.OpenFile(fullPath, Constants.vsViewKindDesigner) time:25.05.2018 11:56:56
+Copy lib files
+C:\Programming\C#\Empty Template4\Output\Library\
+C:\Programming\C#\Empty Template4\Server\
+OnProjectAdded Empty Template4\Architecture.csproj
+Source C:\Programming\C#\Empty Template4\Architecture Dest C:\Programming\C#\Empty Template4\Architecture
+itemOp.OpenFile(fullPath, Constants.vsViewKindDesigner) time:25.05.2018 11:56:57
+Copy lib files
+C:\Programming\C#\Empty Template4\Output\Library\
+C:\Programming\C#\Empty Template4\Server\
+Begin running RunCustomTool
+itemOp.OpenFile(fullPath, Constants.vsViewKindDesigner) time:25.05.2018 11:56:57
+Copy lib files
+C:\Programming\C#\Empty Template4\Output\Library\
+C:\Programming\C#\Empty Template4\Server\
+Begin running RunCustomTool

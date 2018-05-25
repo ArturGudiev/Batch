@@ -1,2 +1,2 @@
 @echo off
-start /MAX taskmgr
+start  tmgr /MAX

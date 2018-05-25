@@ -1,3 +1,4 @@
 @echo off
 
-C:\"Program Files (x86)"\Cisco\"Cisco AnyConnect Secure Mobility Client"\vpncli.exe
+start ciscolink
+REM C:\"Program Files (x86)"\Cisco\"Cisco AnyConnect Secure Mobility Client"\vpncli.exe

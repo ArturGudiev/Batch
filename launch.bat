@@ -1,6 +1,11 @@
 @echo off
 
 if "%1"=="ia" goto IA
+if "%1"=="screen" goto screen
+goto end
+
+:screen
+start screen 
 goto end
 
 :IA

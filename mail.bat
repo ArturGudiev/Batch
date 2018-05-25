@@ -18,6 +18,32 @@ if "%1"=="az" goto azure
 if "%1"=="--help" goto HELP
 if "%1"=="" goto empty
 if "%1"=="step" goto Stepanov
+if "%1"=="az" goto azure
+
+if "%1"=="w" goto work
+if "%1"=="fifa" goto fifa
+if "%1"=="images" goto images
+if "%1"=="u" goto univ
+goto end
+
+:univ
+ch https://mail.google.com/mail/u/0/#label/%%D0%%A3%%D0%%BD%%D0%%B8%%D0%%B2%%D0%%B5%%D1%%80%%D1%%81%%D0%%B8%%D1%%82%%D0%%B5%%D1%%82
+goto end
+
+:images
+ch https://mail.google.com/mail/u/0/#label/%%D0%%A3%%D0%%BD%%D0%%B8%%D0%%B2%%D0%%B5%%D1%%80%%D1%%81%%D0%%B8%%D1%%82%%D0%%B5%%D1%%82/1619eff3ee21a7ad
+goto end
+
+:fifa
+ch https://mail.google.com/mail/u/0/#label/%%D0%%A7%%D0%%9C-2018
+goto end
+
+:work
+start outlook
+goto end
+
+:azure
+ch https://mail.google.com/mail/u/0/#label/Azure
 goto end
 
 :Stepanov
@@ -80,4 +106,3 @@ goto end
 
 :END
 
-echo end

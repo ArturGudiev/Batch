@@ -30,6 +30,12 @@ if "%1"=="kol" goto kolmogorov
 if "%1"=="matrix" goto matrix
 if "%1"=="last" goto last
 if "%1"=="table" goto table
+if "%1"=="which" goto which
+goto end
+
+:which
+echo which(Y[i] == Z) 
+cc which(Y[i] == Z)
 goto end
 
 :TABLE

@@ -23,8 +23,17 @@ if "%1"=="tutorial" goto tutorial
 if "%1"=="t" goto tutorial 
 if "%1"=="chess" goto chess
 if "%1"=="html" goto html
-
+if "%1"=="jquery" goto jquery
+if "%1"=="ajax" goto ajax
 goto end
+
+:AJAX 
+ch https://www.w3schools.com/xml/ajax_xmlhttprequest_send.asp
+goto end 
+
+:JQUERY
+ch https://www.codecademy.com/courses/learn-jquery-introduction/lessons/jquery-setup/exercises/jquery-methods?action=resume_content_item&course_redirect=learn-jquery
+goto end 
 
 :HTML
 start chrome https://www.w3schools.com/html/default.asp

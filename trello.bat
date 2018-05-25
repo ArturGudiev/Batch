@@ -4,6 +4,11 @@ if "%1"=="u" goto UNIVERSITY
 if "%1"=="w" goto WORK
 if "%1"=="pm" goto PM
 if "%1"=="--help" goto HELP
+if "%1"=="fifa" goto fifa
+goto end
+
+:fifa
+ch https://trello.com/b/HtfhwXgZ/spb-support-team
 goto end
 
 :HELP

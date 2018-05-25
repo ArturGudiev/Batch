@@ -20,8 +20,10 @@ if "%1"=="newbie" goto newbie
 if "%1"=="search" goto search
 if "%1"=="s" goto search
 
+
+if "%1"=="js" goto js
 start chrome https://dpa-wiki.lss.emc.com/display/DPA/DPA+Development+Information
-goto END 
+goto end
 
 :SEARCH
 echo in search
@@ -29,6 +31,11 @@ echo in search
 @call set /p v=<tempFileOutput.txt
 del tempFileOutput.txt
 ch https://dpa-wiki.lss.emc.com/dosearchsite.action?queryString=%v%
+
+goto end
+
+:js
+C:\Artur\Wiki\Javascript.docx
 goto end
 
 :NEWBIE

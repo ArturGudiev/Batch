@@ -11,6 +11,16 @@ if "%1"=="maga" goto maga
 if "%1"=="im" goto im
 if "%1"=="football" goto football
 if "%1"=="fb" goto fb
+if "%1"=="leva" goto leva
+if "%1"=="mat" goto mat
+goto end
+
+:mat
+ch https://vk.com/matobes_maga_2017
+goto end
+
+:leva
+ch "https://vk.com/im?peers=c34&sel=80493853"
 goto end
 
 :fb

@@ -5,7 +5,8 @@ if "%1"=="setting" goto SET_TASK
 if "%1"=="script" goto script 
  
 echo going to task
-start java -cp C:\Programming\Java\untitled\out\artifacts\untitled_jar\untitled.jar;C:\Programming\Java\untitled\lib\postgresql-42.2.1.jar utilities/User task
+ch https://dpa-jira.lss.emc.com/browse/DPA-55939
+REM start java -cp C:\Programming\Java\untitled\out\artifacts\untitled_jar\untitled.jar;C:\Programming\Java\untitled\lib\postgresql-42.2.1.jar utilities/User task
 goto end 
 
 :SET_TASK

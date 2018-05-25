@@ -7,6 +7,11 @@ if "%1"=="Azure" goto azure
 if "%1"=="zink" goto zink
 if "%1"=="imagine" goto imagine
 if "%1"=="im" goto imagine
+if "%1"=="tt" goto timetable
+goto end
+
+:timetable
+ch https://timetable.spbu.ru/MATH/StudentGroupEvents/Primary/13712
 goto end
 
 :IMAGINE

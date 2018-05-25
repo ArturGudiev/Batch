@@ -6,7 +6,16 @@ if "%1"=="te" goto template
 if "%1"=="client" goto client
 if "%1"=="cl" goto client
 if "%1"=="cert" goto cert
-ch http://ubiqmobile.com/
+if "%1"=="adv" goto adv
+if "%1"=="EMPTY" goto empty
+goto end
+
+:EMPTY 
+
+goto end
+
+:adv
+ch http://ubiqmobile.com/en/advancedprogramming.html
 goto end
 
 :CERTIFICATE
