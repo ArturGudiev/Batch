@@ -21,7 +21,13 @@ if "%1"=="ahk" goto autohotkey
 if "%1"=="node" goto node
 if "%1"=="mc" goto mc
 if "%1"=="npm" goto npm
+if "%1"=="onedrive" goto onedrive 
 goto end
+
+:ONEDRIVE
+cd /d %LOCALAPPDATA%\Microsoft\OneDrive
+OneDrive.exe /shutdown
+goto end 
 
 :npm
 taskkill /IM node.exe /F
