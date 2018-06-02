@@ -13,7 +13,12 @@ if "%1"=="chair" goto chair
 if "%1"=="heroes" goto heroes
 if "%1"=="images" goto images
 if "%1"=="sbt" goto sbt
+if "%1"=="dsl" goto dsl
 goto end
+
+:DSL
+
+goto end 
 
 :SBT
 start ideac.lnk C:\Users\gudiea\IdeaProjects\Sbt

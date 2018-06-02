@@ -7,7 +7,14 @@ if "%1"=="exp" goto expandAll
 if "%1"=="foldCur" goto foldCurrent
 if "%1"=="comment" goto comment
 if "%1"=="help" goto help
+if "%1"=="errors" goto errors
 goto end
+
+:errors
+echo close debugging instance
+echo create tool
+
+goto end 
 
 :help
 echo in potions
