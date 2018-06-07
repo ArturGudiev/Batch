@@ -12,4 +12,5 @@ goto loop1
 :after_loop
 
 
+echo java -cp C:\Programming\Java\untitled\out\artifacts\untitled_jar\untitled.jar %first% %RESTVAR%
 java -cp C:\Programming\Java\untitled\out\artifacts\untitled_jar\untitled.jar %first% %RESTVAR%

@@ -19,6 +19,16 @@ if "%1"=="t" goto temp
 if "%1"=="color" goto color
 if "%1"=="mvn" goto mvn
 if "%1"=="git" goto git
+if "%1"=="stack" goto stack
+if "%1"=="p" goto ping
+goto end
+
+:ping
+ping 8.8.8.8
+goto end
+
+:stack
+ch stackoverflow.com
 goto end
 
 :git

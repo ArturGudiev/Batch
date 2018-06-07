@@ -1,7 +1,12 @@
 @echo off
 
 if "%1"=="new" goto new
+if "%1"=="e" goto exception
 goto end
+
+:exception
+cc try{}catch(System.Exception e){}
+goto end 
 
 :new
 	if "%2"=="class" goto new_class

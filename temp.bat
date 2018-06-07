@@ -3,6 +3,11 @@
 if "%1"=="m" goto maven
 if "%1"=="a" goto azure
 if "%1"=="c" goto code
+if "%1"=="s" goto stack
+goto end
+
+:stack
+ch https://stackoverflow.com/questions/50608200/print-javascripts-method-name-in-idea-live-template
 goto end
 
 :code

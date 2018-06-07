@@ -8,6 +8,27 @@ if "%1"=="cl" goto client
 if "%1"=="cert" goto cert
 if "%1"=="adv" goto adv
 if "%1"=="EMPTY" goto empty
+if "%1"=="er" goto errors
+if "%1"=="sph" goto sph
+if "%1"=="spv" goto spv
+if "%1"=="cell" goto cell
+if "%1"=="c" goto cell
+goto end
+
+:CELL 
+cc new Cell{Content = %2},
+goto end 
+
+:SPH
+cc new StackPanel{ Children = {}, Orientation = Orientation.Horizontal}
+goto end 
+
+:SPV
+cc new StackPanel{ Children = {}, Orientation = Orientation.Vertical}
+goto end 
+
+:errors
+echo don't use 1 element in 2 places
 goto end
 
 :EMPTY 

@@ -42,7 +42,7 @@ sleep 5
 goto end
 
 :study
-close skype & close mc & sound -
+close skype & close mc & sound - & close pu
 goto end
 
 :JustUI
