@@ -94,7 +94,7 @@ cc source("../lib/lib.R")
 goto end
 
 :CHISQQ
-cc qchisq(.95, df=)
+cc 	(.95, df=)
 goto end
 
 :VECTOR

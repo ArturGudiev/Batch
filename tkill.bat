@@ -1,2 +1,2 @@
-@echo off
+n @echo off
 taskkill /IM %1.exe

@@ -22,6 +22,7 @@ if "%1"=="letter" goto letter
 if "%1"=="mail" goto mail
 if "%1"=="pwd" goto pwd
 if "%1"=="mypwd" goto mypwd
+if "%1"=="pwd1" goto mypwd
 
 if "%1"=="rule" goto rule
 if "%1"=="r" goto rule
@@ -37,6 +38,69 @@ if "%1"=="bc" goto batchcondition
 if "%1"=="chpwd" goto CHROMEPWD
 if "%1"=="oninit" goto OnInit
 if "%1"=="cpu" goto cpu
+if "%1"=="gapi" goto gapi
+if "%1"=="pwd2" goto pwd2
+if "%1"=="quest" goto quest
+if "%1"=="apo" goto apostrophe
+if "%1"=="apostrophe" goto apostrophe
+if "%1"=="obj" goto obj
+if "%1"=="ip" goto ip
+if "%1"=="utair" goto utair
+if "%1"=="dellnumber" goto dellnumber
+if "%1"=="megafon" goto megafon
+if "%1"=="ae" goto ae
+if "%1"=="ssd" goto screenshotdir
+if "%1"=="ssdir" goto screenshotdir
+if "%1"=="screenshotdir" goto screenshotdir
+if "%1"=="ipl" goto ipl
+goto end
+
+:ipl
+ec https://10.77.4.74:9002
+goto end
+
+:screenshotdir
+ec C:\Users\gudiea\Desktop\Screen\ScreenShots
+goto end
+
+:ae
+cc æ
+goto end
+
+:megafon
+ec +79312303920
+goto end
+
+:dellnumber
+cc 1113410
+goto end
+
+:utair
+cc 1024099176
+goto end
+
+:ip
+ec 10.77.4.74
+goto end
+
+:obj
+cc {_text: , _attributes: {}}
+goto end
+
+:apostrophe
+cc `
+goto end
+
+:quest
+cc \\NASRUSP102v1\Russia_CoE_All\Photos\2018_goFika_Quest
+goto end
+
+:pwd2
+cc 362044Dpa!
+goto end
+
+:gapi
+cc https://api.github.com/
 goto end
 
 :cpu

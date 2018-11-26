@@ -1,11 +1,11 @@
 @echo off
 
 if "%1"=="" goto EMPTY
-if "%1"=="main" goto main
+if "%1"=="repos" goto repos
 goto end
 
-:main
-ch https://console.developers.google.com/
+:repos
+ch  https://api.github.com/users/ArturGudiev/repos
 goto end
 
 :EMPTY

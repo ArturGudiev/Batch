@@ -21,6 +21,35 @@ if "%1"=="ahk" goto autohotkey
 if "%1"=="node" goto node
 if "%1"=="mc" goto mc
 if "%1"=="npm" goto npm
+if "%1"=="sm" goto skypemcaffee
+if "%1"=="t" goto torrent
+if "%1"=="tor" goto torrent
+if "%1"=="torrent" goto torrent
+if "%1"=="recorder" goto recorder
+if "%1"=="ss" goto recorder
+if "%1"=="screen" goto recorder
+if "%1"=="outlook" goto outlook
+if "%1"=="flash" goto flash
+goto end
+
+:flash
+taskkill /im flashplayer_31_sa_debug.exe /F
+goto end
+
+:outlook
+taskkill /IM OUTLOOK.EXE
+goto end
+
+:recorder
+taskkill /im recorder.exe
+goto end
+
+:torrent
+taskkill /IM utorrentie.exe
+goto end
+
+:skypemcaffee
+close skype & close mc
 goto end
 
 :npm

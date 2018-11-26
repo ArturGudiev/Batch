@@ -1,6 +1,6 @@
 @set START_TIME=!time!
 @set DPA_INSTALL_HOME=C:\EMC\DPA
-@set PLATFORM_CODE_HOME=c:\DPA_SVN\TRUNK\
+@set PLATFORM_CODE_HOME=C:\Src\EMC\DPA\trunk\
 
 @cd /D %PLATFORM_CODE_HOME%
 @echo building platform

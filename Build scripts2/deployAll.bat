@@ -1,6 +1,6 @@
 @set START_TIME=!time!
 @set DPA_INSTALL_HOME=C:\EMC\DPA
-@set DPA_CODE_HOME=c:\DPA_SVN\TRUNK\tools\maven-dev-profiles  
+@set DPA_CODE_HOME=C:\Src\EMC\DPA\trunk\tools\maven-dev-profiles  
 
 
 @cd /D %DPA_INSTALL_HOME%\services\bin
@@ -18,7 +18,7 @@ ping 1.1.1.1 -n 1 -w 10000
 @echo db service state is %DB_SERVICE_STATE%
 
 @echo stopping db service
-@call dpa ds stop
+@call dpa ds stop --quiet
 ping 1.1.1.1 -n 1 -w 10000
 
 ping 1.1.1.1 -n 1 -w 1000
@@ -28,12 +28,12 @@ ping 1.1.1.1 -n 1 -w 1000
 
 @cd /D %DPA_CODE_HOME%
 @echo running deployer to %DPA_INSTALL_HOME%
-@call mvn -U clean install -PDeployServer,DeployUI,DeployBinaries,svn18 -DDPA.DEPLOY.DIR=%DPA_INSTALL_HOME%
+@call mvn -U clean install -PDeployServer,DeployUI,DeployBinaries -DDPA.DEPLOY.DIR=%DPA_INSTALL_HOME%
 @IF %ERRORLEVEL% NEQ 0 goto error
 
 
 @cd /D %DPA_INSTALL_HOME%
-@echo wrapper.java.additional.25=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5555 >> .\services\executive\application-service.conf
+@echo wrapper.java.additional.25=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=16667 >> .\services\executive\application-service.conf
 @cd /D %DPA_INSTALL_HOME%\services\bin
 
 @echo starting service

@@ -1,18 +1,28 @@
 @echo off
 
-set protocol=http
-set port=9004
+set protocol=https
+set port=3030
 set eng=
 
-for %%x in (%*) do (
-	if "%%x"=="e" set eng=dpaui.jsp?engMode=true
-	if "%%x"=="s" set protocol=https
-	if "%%x"=="2" set port=9002
-	if "%%x"=="--help" goto HELP
-)
 
-start  %protocol%://localhost:%port%/%eng%
-echo. 
+REM start  %protocol%://localhost:%port%/%eng%
+REM echo. 
+if "%1"=="alerts" goto alerts
+if "%1"=="a" goto alerts
+if "%1"=="my" goto my
+if "%1"=="my2" goto my2
+goto end
+
+:my2
+ch https://localhost:3030/my2
+goto end
+
+:my
+ch https://localhost:3030/my
+goto end
+
+:alerts
+ch https://localhost:3030/alerts
 goto end
 
 
@@ -23,6 +33,7 @@ echo  s 	-- Secured https
 echo  2 	-- 9002 port
 echo. 
 goto end
+
 
 
 :END

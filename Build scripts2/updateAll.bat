@@ -1,5 +1,5 @@
 
-@set DPA_CODE_HOME=c:\DPA_SVN\TRUNK\
+@set DPA_CODE_HOME=C:\Src\EMC\DPA\trunk\
 
 
 @cd /D %DPA_CODE_HOME%

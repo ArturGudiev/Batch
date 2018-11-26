@@ -2,11 +2,12 @@
 set filepath=C:\Artur\Work\tasks\ctask.txt
 set hh=%TIME:~0,2%
 set mm=%TIME:~3,2%
+set ss=%TIME:~6,2%
 
 if "%1"=="l" goto blank
 if "%1"=="ll" (c l 10)
 if "%1"=="save" goto save
-echo %hh%:%mm% "%*">> %filepath%
+echo %hh%:%mm%:%ss% "%*">> %filepath%
 goto end
 
 :BLANK
@@ -30,14 +31,14 @@ del "%temp%\%~n0.vbs"
 set "YYYY=%result:~0,4%"
 set "MM=%result:~4,2%"
 set "DD=%result:~6,2%"
-set "data=%dd%-%mm%"
-set "name=Dairy%data%.txt"
+set "data=%mm%-%dd%"
+set "name=%data%.txt"
 
-echo %name% has added to C:\Artur\mine\dairies
-
-ren dairy.txt %name%
-move %name% dairies
-echo. 2> dairy.txt
+@call copy C:\Artur\Work\tasks\ctask.txt C:\Artur\mine\dairies\%name%
+@call echo C:\Artur\Work\tasks\ctask.txt C:\Artur\mine\dairies\%name%
+@call d C:\Artur\Work\tasks\ctask.txt
+ 
+echo. C:\Artur\Work\tasks\ctask.txt
 goto endlast 
 
 :END

@@ -17,7 +17,9 @@ if "%1"=="down" goto downloads
 
 
 if "%1"=="s" goto script
+if "%1"=="sv" goto script_vim
 if "%1"=="script" goto script
+
 
 if "%1"=="ali" goto alias
 
@@ -63,8 +65,50 @@ if "%1"=="util" goto util
 
 if "%1"=="--help" goto HELP
 
+if "%1"=="u" goto util
+if "%1"=="util" goto util
 
-goto end 
+if "%1"=="a" goto autohotkey
+if "%1"=="autohotkey" goto autohotkey
+
+if "%1"=="alias" goto alias
+if "%1"=="al" goto alias
+if "%1"=="a" goto alias
+if "%1"=="settings" goto settings
+if "%1"=="subway" goto subway
+if "%1"=="sub" goto subway
+if "%1"=="open" goto  post postman
+if "%1"=="pow" goto pow
+if "%1"=="p" goto pow
+goto end
+
+:pow
+vim C:\Programming\PowerShell\%1%.ps1
+goto end
+
+: post postman
+postman
+goto end
+
+:subway
+start C:\Artur\Photos\subway.png
+goto end
+
+:autohotkey
+n+ C:\Programming\Autohotkey\%2.ahk
+goto end
+
+:settings
+n+ C:\Users\gudiea\.m2\settings.xml
+goto end
+
+:alias
+n+ C:\Programming\Batch\Aliases\%2.bat
+goto end
+
+
+
+
 
 :HELP
 echo.
@@ -170,7 +214,7 @@ n+ C:\Program Files\EMC\DPA\services\executive\datastore-service.conf
 goto end
 
 :UIDIR
-cd C:\Src\EMC\DPA\new2\dpa-ui-html\angular-app
+cd C:\Src\EMC\DPA\ui\html-ui\angular-app
 goto end
 
 :SCREEN
@@ -212,7 +256,16 @@ cd C:\Artur
 goto end
 
 :SCRIPT
+if NOT "%3"=="" (
+	untitled utilities.Batch C:\Programming\Batch\%2.bat --open %3
+	goto end 
+)
 n+ C:\Programming\Batch\%2.bat
+goto end
+
+:SCRIPT_VIM
+
+vim C:\Programming\Batch\%2.bat
 goto end
 
 :ALIAS
@@ -220,7 +273,7 @@ n+ C:\Programming\Batch\Aliases\%2.bat
 goto end 
 
 :ACTIONS 
-n+ C:\Artur\actions.txt
+vim C:\Artur\actions.txt
 goto end
 
 :BOARD

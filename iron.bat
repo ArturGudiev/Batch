@@ -8,6 +8,11 @@ if "%1"=="self" goto self
 
 :TV
 start chrome https://www.youtube.com/channel/UCYkQwqgSyQbaiDJSqg4CvOA/videos
+if "%1"=="k9" goto k9
+goto end
+
+:k9
+start C:\Artur\Books\School\Iron\9.djvu
 goto end
 
 :NEWS

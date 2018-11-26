@@ -5,6 +5,12 @@ if "%1"=="zink" goto zink
 if "%1"=="larson" goto larson
 if "%1"=="scala" goto scala
 if "%1"=="vim" goto vim
+if "%1"=="ng" goto angular
+if "%1"=="angular" goto angular
+goto end
+
+:angular
+sa C:\Artur\Books\Work\Angular.pdf
 goto end
 
 :vim

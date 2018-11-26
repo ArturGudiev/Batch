@@ -1,9 +1,9 @@
-@set DPA_INSTALL_HOME=C:\EMC\DPA1
-@set DPA_CODE_HOME=C:\Src\EMC\DPA\6.5.0_1\
+@set DPA_INSTALL_HOME=C:\EMC\DPA
+@set DPA_CODE_HOME=C:\Src\EMC\DPA\trunk
  
 @cd /D %DPA_CODE_HOME%\
 @echo build server
-@call mvn clean install -Dmaven.test.skip=false -PBuildServer -T4
+@call mvn clean install -Dmaven.test.skip=true -PBuildServer -T4
 @IF %ERRORLEVEL% NEQ 0 goto error
 
 

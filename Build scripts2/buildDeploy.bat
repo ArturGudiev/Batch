@@ -1,8 +1,8 @@
+@echo in build deploy
 @set RETURN_BACK=%CD%
 
-@call buildAllApp
-
-@REM @call buildAllAppWithoutUI
+@REM @call buildAllApp
+@call buildAllAppWithoutUI
 
 @cd /D %RETURN_BACK%
 

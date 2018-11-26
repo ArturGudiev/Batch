@@ -4,6 +4,11 @@ if "%1"=="adv" goto advanced
 if "%1"=="svc" goto svc
 if "%1"=="settings" goto settings
 if "%1"=="s" goto settings
+if "%1"=="rerun" goto rerun
+goto end
+
+:rerun
+start /MAX cmd & exit
 goto end
 
 

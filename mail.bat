@@ -2,7 +2,6 @@
 
 
 if "%1"=="sent" goto SENT
-if "%1"=="s" goto SENT
 if "%1"=="i" goto INBOX
 if "%1"=="inbox" goto INBOX
 if "%1"=="new" goto NEW
@@ -24,6 +23,12 @@ if "%1"=="w" goto work
 if "%1"=="fifa" goto fifa
 if "%1"=="images" goto images
 if "%1"=="u" goto univ
+if "%1"=="s" goto search
+if "%1"=="search" goto search
+goto end
+
+:search
+ch https://mail.google.com/mail/u/0/#search/%2
 goto end
 
 :univ
@@ -51,7 +56,7 @@ ch https://mail.google.com/mail/u/0/#inbox/1619eff3ee21a7ad
 goto end
 
 :EMPTY
-start https://mail.google.com/mail/u/0/#inbox
+ch https://mail.google.com/mail/u/0/#inbox
 goto end 
 
 :AZURE
@@ -67,11 +72,11 @@ ch "https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=
 goto end
 
 :INBOX
-start https://mail.google.com/mail/u/0/#inbox
+ch https://mail.google.com/mail/u/0/#inbox
 goto end
 
 :GERMAN
-start https://mail.google.com/mail/u/0/#label/%%D0%%A3%%D0%%BD%%D0%%B8%%D0%%B2%%D0%%B5%%D1%%80%%D1%%81%%D0%%B8%%D1%%82%%D0%%B5%%D1%%82%%2F%%D0%%9D%%D0%%B5%%D0%%BC%%D0%%B5%%D1%%86%%D0%%BA%%D0%%B8%%D0%%B9
+ch https://mail.google.com/mail/u/0/#label/%%D0%%A3%%D0%%BD%%D0%%B8%%D0%%B2%%D0%%B5%%D1%%80%%D1%%81%%D0%%B8%%D1%%82%%D0%%B5%%D1%%82%%2F%%D0%%9D%%D0%%B5%%D0%%BC%%D0%%B5%%D1%%86%%D0%%BA%%D0%%B8%%D0%%B9
 goto end
 
 :NEW
@@ -79,20 +84,20 @@ echo new mail
 	if "%2"=="dady" goto new_dady
 	if "%2"=="terekhov" goto new_terekhov
 	if "%2"=="ter" goto new_terekhov
-	start https://mail.google.com/mail/u/0/#inbox?compose=new
+	ch https://mail.google.com/mail/u/0/#inbox?compose=new
 	goto end
 	
 	:NEW_DADY
-	start https://mail.google.com/mail/u/0/#inbox?compose=162387447ab4065b
+	ch https://mail.google.com/mail/u/0/#inbox?compose=162387447ab4065b
 	goto end
 	
 	:NEW_TEREKHOV
-	start https://mail.google.com/mail/u/0/#search/Andrey.Terekhov%40lanit-tercom.com/15e6f2fb764ad201
+	ch https://mail.google.com/mail/u/0/#search/Andrey.Terekhov%40lanit-tercom.com/15e6f2fb764ad201
 	goto end
 goto end
 
 :SENT
-start https://mail.google.com/mail/u/0/#sent
+ch https://mail.google.com/mail/u/0/#sent
 goto end
 
 

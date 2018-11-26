@@ -22,6 +22,36 @@ if "%1"=="chat" goto chat
 if "%1"=="cont" goto controller
 if "%1"=="vol" goto volunteer
 if "%1"=="dsl" goto mobiledsl
+if "%1"=="ui" goto ui
+if "%1"=="181" goto v181
+if "%1"=="here" goto here
+if "%1"=="todo" goto todo
+if "%1"=="sports" goto sports
+if "%1"=="test" goto test
+goto end
+
+:test
+start idea.lnk C:\Src\EMC\DPA\html-ui-automation-tests"
+goto end
+
+:sports
+start idea.lnk C:\Programming\Angular\SportsStore\
+goto end
+
+:todo
+start idea.lnk C:\Programming\Angular\todo"
+goto end
+
+:here
+start idea.lnk %cd%
+goto end
+
+:v181
+start idea.lnk C:\Src\EMC\DPA\18.1.0\
+goto end 
+
+:ui
+start idea.lnk C:\Src\EMC\DPA\ui\html-ui\
 goto end
 
 :mobiledsl
@@ -65,7 +95,7 @@ start vs12.lnk "C:\Programming\C#\Empty Template2\Empty Template2.sln"
 goto end
 
 :search
-start idea.lnk C:\Programming\Scala\infosearch"
+start ideac.lnk C:\Programming\Scala\infosearch"
 goto end
 
 :SBT
@@ -81,7 +111,7 @@ start idea.lnk C:\Programming\R\Stat
 goto end
 
 :HEROES
-start idea.lnk C:\Programming\Web\angular-tour-of-heroes
+start idea.lnk C:\Programming\Angular\angular-tour-of-heroes
 goto end
 
 :CHAIR
@@ -118,8 +148,5 @@ goto end
 :TRUNK
 start idea.lnk C:\Src\EMC\DPA\trunk\
 goto end
-
-
-
 
 :END

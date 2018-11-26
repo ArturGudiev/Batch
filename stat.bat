@@ -26,7 +26,7 @@ if "%1"=="rfunc" goto rfunc
 if "%1"=="distribution" goto distribution
 if "%1"=="d" goto distribution
 
-if "%1"=="disp" goto disp
+if "%1"=="disp_old" goto disp REM old
 
 if "%1"=="slack" goto slack
 if "%1"=="drive" goto drive
@@ -47,6 +47,41 @@ if "%1"=="cap" goto cap
 if "%1"=="ex" goto exam
 if "%1"=="sal" goto salary
 if "%1"=="pair" goto pair
+if "%1"=="continious" goto density
+if "%1"=="density" goto density
+if "%1"=="expectancy_properties" goto expectancy_properties
+if "%1"=="exp_pro" goto expectancy_properties REM 
+if "%1"=="disp" goto disp_moments
+if "%1"=="moments" goto disp_moments
+if "%1"=="disp_pro" goto disp_pro
+if "%1"=="examples_discrete" goto discrete_examples
+if "%1"=="dis_exa" goto discrete_examples
+if "%1"=="kol" goto kol
+goto end
+
+:kol
+start C:\Artur\Wiki\Stat\kolmogorov.png
+goto end
+
+:discrete_examples
+start C:\Artur\Wiki\Stat\pictures\examples_discrete.png
+goto end
+
+:disp_pro
+start C:\Artur\Wiki\Stat\pictures\disp_pro.png
+goto end
+
+:disp_moments
+start C:\Artur\Wiki\Stat\pictures\dispersion_moments.png
+goto end
+
+REM 
+:expectancy_properties
+start C:\Artur\Wiki\Stat\pictures\expectancy_properties.png
+goto end
+
+:density
+start C:\Artur\Wiki\Stat\pictures\continous_density.png
 goto end
 
 :pair
@@ -182,7 +217,7 @@ ch "https://compscicenter.ru/courses/math-stat/2018-spring/classes/"
 goto end
 
 :STEPIC
-ch "https://stepik.org/course/1939/continue"
+ch https://stepik.org/course/326/continue
 goto end
 
 :SLIDE

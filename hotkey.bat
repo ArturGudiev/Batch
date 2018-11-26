@@ -9,15 +9,23 @@ if "%1"=="nav" goto navigate
 if "%1"=="deutsch" goto deutsch
 if "%1"=="de" goto deutsch
 
+if "%1"=="portuguese" goto portuguese
+if "%1"=="p" goto portuguese
+
 if "%1"=="edit" goto edit
 if "%1"=="e" goto edit
 
 start %DESKTOP%\Hotkeys\Hotkeys.ahk
 goto end
 
+:portuguese
+
+goto end 
+
 :EDIT
 	if "%2"=="navigate" goto edit_navigate
 	if "%2"=="nav" goto edit_navigate
+	if "%2"=="i" (start idea.lnk C:\Users\gudiea\Desktop\Hotkeys\Hotkeys.ahk & goto end)
 n+ C:\Users\gudiea\Desktop\Hotkeys\Hotkeys.ahk
 goto end
 

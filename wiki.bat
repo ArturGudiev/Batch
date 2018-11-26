@@ -22,20 +22,140 @@ if "%1"=="s" goto search
 
 
 if "%1"=="js" goto js
-start chrome https://dpa-wiki.lss.emc.com/display/DPA/DPA+Development+Information
+if "%1"=="bunchie" goto bunchie
+if "%1"=="sass" goto sass
+if "%1"=="css" goto css
+if "%1"=="" goto empty
+if "%1"=="ng" goto angular
+if "%1"=="angular" goto angular
+if "%1"=="errors" goto errors
+if "%1"=="7z" goto 7z
+if "%1"=="newtask" goto newtask
+if "%1"=="nt" goto newtask
+if "%1"=="time" goto time
+if "%1"=="alerts" goto alerts
+if "%1"=="install" goto install
+if "%1"=="flexui" goto flexui
+if "%1"=="softtoken" goto softtoken
+if "%1"=="soft" goto softtoken
+if "%1"=="dpa" goto dpa
+if "%1"=="perf" goto perfomance
+if "%1"=="perfomance" goto perfomance
+if "%1"=="vim" goto vim
+if "%1"=="ns" goto newsession
+if "%1"=="newsession" goto newsession
+if "%1"=="backup" goto backup
+if "%1"=="database" goto database
+if "%1"=="db" goto database
+if "%1"=="en" goto english
+if "%1"=="english" goto english
+if "%1"=="e" goto english
+goto end
+
+:english
+start C:\Artur\Wiki\English.mm
+start focus.ahk English.mm
+goto end
+
+:database
+ch https://confluence.cec.lab.emc.com:8443/display/DPA/Databases
+goto end
+
+:backup
+ch https://confluence.cec.lab.emc.com:8443/display/DPA/Backup+Applications
+goto end
+
+:newsession
+	if "%2"=="e" (n+ C:\Artur\Wiki\newsession.txt & goto end )
+more C:\Artur\Wiki\newsession.txt
+goto end
+
+:vim
+n+ C:\Artur\Wiki\Vim\wiki.txt
+goto end
+
+:perfomance
+more C:\Artur\Wiki\perfomance.txt
+goto end
+
+:dpa
+n+ C:\Artur\Wiki\DPA\DPA.txt
+goto end
+
+:softtoken
+echo 1) OPEN RSA 
+echo 2) Enter you PIN CODE 
+echo 3) GET PASS CODE 
+echo 4) OPEN CISCO 
+echo 5) SELECT IRELAND 
+echo 6) ENTER login and passcode 
+goto end
+
+:flexui
+ch https://dpa-wiki.lss.emc.com/display/DPA/Configure+JetBrains+IDEA+with+DPA+6.x+UI+Flex+project
+goto end
+
+:install
+more C:\Artur\Wiki\DPA\install.txt
+goto end
+
+:alerts
+ch https://confluence.cec.lab.emc.com:8443/display/DPA/How+to+generate+different+alerts+in+DPA
+goto end
+
+:time
+n+ C:\Artur\Wiki\DPA\time.txt
+goto end
+
+:newtask
+	if "%2"=="e" (
+		n+ C:\Artur\Wiki\DPA\newtask.txt
+		goto end 
+	)
+	more C:\Artur\Wiki\DPA\newtask.txt
+goto end
+
+:7z
+echo 7z e archive.zip -oPathToFolder & echo 7z a archive.zip file.txt
+goto end
+
+:errors
+echo opening Errors.txt
+n+ C:\Artur\Wiki\DPA\Errors.txt
+goto end
+
+:angular
+start C:\Artur\Wiki\Angular.mm
+REM n+ C:\Artur\Wiki\Angular\Ang.txt
+goto end
+
+:EMPTY
+start chrome https://confluence.cec.lab.emc.com:8443/display/DPA/DPA+Home
+goto end 
+
+:css
+start C:\Artur\Wiki\CSS.mm
+goto end
+
+:sass
+n+ C:\Artur\Wiki\Sass.txt
+goto end
+
+:bunchie
+ch https://dpa-wiki.lss.emc.com/display/DPP/Bunchie+Team
 goto end
 
 :SEARCH
 echo in search
-@call replace %2 " " "+" > tempFileOutput.txt
-@call set /p v=<tempFileOutput.txt
-del tempFileOutput.txt
-ch https://dpa-wiki.lss.emc.com/dosearchsite.action?queryString=%v%
+REM @call replace %2 " " "+" > tempFileOutput.txt
+REM @call set /p v=<tempFileOutput.txt
+REM del tempFileOutput.txt
+ch https://dpa-wiki.lss.emc.com/dosearchsite.action?queryString=%2
 
 goto end
 
 :js
-C:\Artur\Wiki\Javascript.docx
+n+ C:\Artur\Wiki\Javascript.txt
 goto end
 
 :NEWBIE
@@ -52,7 +172,7 @@ ch https://dpa-wiki.lss.emc.com/spaces/viewspace.action?key=~gudiea
 goto end
 
 :UI
-start https://dpa-stash.lss.emc.com/projects/POC/repos/dpa-ui-html/browse
+n+ C:\Artur\Wiki\DPA\ui.txt
 goto end
 
 :COMVAULT
@@ -68,7 +188,7 @@ start chrome https://dpa-wiki.lss.emc.com/display/DPA/Backup+Applications
 goto END
  
 :SPb
-start https://dpa-wiki.lss.emc.com/display/DREL/SPb+machines+in+US+lab
+start https://dpa-wiki.lss.emc.com/display/VSPHER/QA+virtual+machines+in+US+lab
 goto END
 
 :MY

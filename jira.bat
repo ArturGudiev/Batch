@@ -6,15 +6,30 @@ if "%1"=="task2" goto task2
 
 if "%1"=="board" goto board
 if "%1"=="b" goto board
+if "%1"=="ob" goto old_board
+if "%1"=="bu" goto burndown
+if "%1"=="burn" goto burndown
+if "%1"=="denis" goto denis
 goto end
 
+:denis
+ch https://jira.cec.lab.emc.com:8443/secure/Dashboard.jspa?selectPageId=14305 
+goto end
+
+:burndown
+ch "https://jira.cec.lab.emc.com:8443/secure/RapidBoard.jspa?rapidView=984&view=reporting&chart=burndownChart&sprint=3431"
+goto end
+
+:old_board
+ch "https://dpa-jira.lss.emc.com/secure/RapidBoard.jspa?rapidView&sprint=1337"
+goto end 
 
 :CLOSED
 start https://dpa-crucible.lss.emc.com/cru?filter=closed
 goto end
 
 :BOARD
-ch "https://dpa-jira.lss.emc.com/secure/RapidBoard.jspa?rapidView&sprint=1337"
+ch "https://jira.cec.lab.emc.com:8443/secure/RapidBoard.jspa?rapidView=984&sprint=3431"
 goto end
 
 :TASK
@@ -24,4 +39,3 @@ goto end
 :HELP
 
 :END
-echo in end

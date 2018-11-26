@@ -1,2 +1,2 @@
 @echo off
-cd %DPA%
+C:\"Program Files"\EMC\DPA\services\bin\dpa.bat %*

@@ -1,6 +1,9 @@
 set version=trunk
 if "%1"=="65" set version=6.5.0
 if "%1"=="64" set version=6.4.0
+if "%1"=="181" set version=18.1.0
+if "%1"=="18.1" set version=18.1.0
+if "%1"=="18.1.0" set version=18.1.0
 
 
 echo version is %version% 

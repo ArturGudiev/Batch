@@ -8,6 +8,21 @@ if "%1"=="e" goto echo
 if "%1"=="u1" goto user1
 if "%1"=="c1" goto course1
 if "%1"=="c2" goto course2
+if "%1"=="l1" goto link1
+if "%1"=="q1" goto q1
+if "%1"=="example" goto example
+goto end
+
+:example
+ch http://knowdimension.com/en/data/create-a-spark-application-with-scala-using-maven-on-intellij/
+goto end
+
+:q1
+cc https://api.github.com/search/repositories?q=language:assembly+stars:^^^>=50
+goto end
+
+:link1
+ch https://cognitiveclass.ai/courses/what-is-spark/
 goto end
 
 :course2

@@ -5,8 +5,24 @@ if "%1"=="words" goto words
 if "%1"=="interesting" goto intersting
 if "%1"=="reasonings" goto reasonings
 if "%1"=="r" goto reasonings
+if "%1"=="cal" goto calendar
+if "%1"=="calendar" goto calendar
+if "%1"=="" goto EMPTY
+if "%1"=="t" goto touching
+if "%1"=="to" goto touching
+if "%1"=="touching" goto touching
+goto end
 
+:touching
+ch https://docs.google.com/document/d/19O3CPJwQKBTnpPyxQwgtTi2UzIJWy0npgkqNXOAL78Y/edit
+goto end
+
+:EMPTY
 ch drive.google.com
+goto end 
+
+:calendar
+ch https://docs.google.com/spreadsheets/d/1GeUJUAjR0GmpXwaluEf1z926D6ll_hBRxjXsTx5K35Q/edit
 goto end
 
 :REASONINGS

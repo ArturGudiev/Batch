@@ -2,6 +2,12 @@
 
 if "%1"=="" goto EMPTY
 if "%1"=="l" goto logoff
+if "%1"=="r" goto restart
+if "%1"=="restart" goto restart
+goto end
+
+:restart
+shutdown /r /t 0
 goto end
 
 :logoff
