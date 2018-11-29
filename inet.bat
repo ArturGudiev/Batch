@@ -56,6 +56,11 @@ if "%1"=="ip2" goto ip2
 if "%1"=="ip1" goto ip1
 if "%1"=="vsphere" goto vsphere
 if "%1"=="vsp" goto vsphere
+if "%1"=="vm" goto vm
+goto end
+
+:vm
+ch https://10.98.63.243:9002
 goto end
 
 :vsphere

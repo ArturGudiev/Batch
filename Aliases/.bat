@@ -1,2 +1,0 @@
-@echo off
-conemu.bat %*

@@ -92,7 +92,7 @@ echo 6) ENTER login and passcode
 goto end
 
 :flexui
-ch https://dpa-wiki.lss.emc.com/display/DPA/Configure+JetBrains+IDEA+with+DPA+6.x+UI+Flex+project
+ch https://confluence.cec.lab.emc.com:8443/display/DPA/Configure+JetBrains+IDEA+with+DPA+6.x+UI+Flex+project
 goto end
 
 :install
@@ -142,7 +142,7 @@ n+ C:\Artur\Wiki\Sass.txt
 goto end
 
 :bunchie
-ch https://dpa-wiki.lss.emc.com/display/DPP/Bunchie+Team
+ch https://confluence.cec.lab.emc.com:8443/display/DPP/Bunchie+Team
 goto end
 
 :SEARCH
@@ -150,7 +150,7 @@ echo in search
 REM @call replace %2 " " "+" > tempFileOutput.txt
 REM @call set /p v=<tempFileOutput.txt
 REM del tempFileOutput.txt
-ch https://dpa-wiki.lss.emc.com/dosearchsite.action?queryString=%2
+ch https://confluence.cec.lab.emc.com:8443/dosearchsite.action?queryString=%2
 
 goto end
 
@@ -159,16 +159,16 @@ n+ C:\Artur\Wiki\Javascript.txt
 goto end
 
 :NEWBIE
-ch https://dpa-wiki.lss.emc.com/display/DPA/DPA+6.x+for+newbie
+start https://confluence.cec.lab.emc.com:8443/display/DPA/DPA+6.x+for+newbie
 goto end 
 
 :PASSWORD
-ch https://dpa-wiki.lss.emc.com/display/RE/How+to+get+encrypted+Artifactory+password
+ch https://confluence.cec.lab.emc.com:8443/display/RE/How+to+get+encrypted+Artifactory+password
 goto end
 
 
 :SPACE
-ch https://dpa-wiki.lss.emc.com/spaces/viewspace.action?key=~gudiea
+ch https://confluence.cec.lab.emc.com:8443/spaces/viewspace.action?key=~gudiea
 goto end
 
 :UI
@@ -176,23 +176,23 @@ n+ C:\Artur\Wiki\DPA\ui.txt
 goto end
 
 :COMVAULT
-start chrome  https://dpa-wiki.lss.emc.com/display/PUB/How+to+discover+Commvault+in+DPA
+start chrome  https://confluence.cec.lab.emc.com:8443/display/PUB/How+to+discover+Commvault+in+DPA
 goto END
 
 :COLLECT
-start chrome https://dpa-wiki.lss.emc.com/display/DPA/Configure+DPA+version+6.5+Agent+to+go+back+and+collect+backup+application+data
+start chrome https://confluence.cec.lab.emc.com:8443/display/DPA/Configure+DPA+version+6.5+Agent+to+go+back+and+collect+backup+application+data
 goto END
 
 :AVAMAR
-start chrome https://dpa-wiki.lss.emc.com/display/DPA/Backup+Applications
+start chrome https://confluence.cec.lab.emc.com:8443/display/DPA/Backup+Applications
 goto END
  
 :SPb
-start https://dpa-wiki.lss.emc.com/display/VSPHER/QA+virtual+machines+in+US+lab
+start https://confluence.cec.lab.emc.com:8443/display/VSPHER/QA+virtual+machines+in+US+lab
 goto END
 
 :MY
-start chrome https://dpa-wiki.lss.emc.com/display/DPA/Wiki
+start chrome https://confluence.cec.lab.emc.com:8443/display/DPA/Wiki
 goto END
 
 :END

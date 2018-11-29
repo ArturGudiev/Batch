@@ -17,7 +17,7 @@ ch https://jira.cec.lab.emc.com:8443/secure/Dashboard.jspa?selectPageId=14305
 goto end
 
 :burndown
-ch "https://jira.cec.lab.emc.com:8443/secure/RapidBoard.jspa?rapidView=984&view=reporting&chart=burndownChart&sprint=3431"
+ch "https://jira.cec.lab.emc.com:8443/secure/RapidBoard.jspa?rapidView=984&view=reporting&chart=burndownChart&sprint=3599"
 goto end
 
 :old_board

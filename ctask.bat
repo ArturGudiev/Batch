@@ -21,6 +21,27 @@ if "%1"=="remote" goto remote
 if "%1"=="clear" goto clear
 if "%1"=="c" goto copy
 if "%1"=="c3" goto copy3
+if "%1"=="st" goto st
+if "%1"=="test" goto test
+if "%1"=="test2" goto test2
+if "%1"=="tcmd" goto tcmd
+if "%1"=="tc" goto tcmd
+goto end
+
+:tcmd
+start totalcmder /o  /R=C:\EMC\DPA\services\applications\ /L=C:\Artur\Work\tasks\19_DPA-57628_Transaction_rolled_back_error_appears
+goto end
+
+:test2
+ch https://dpa-ci.lss.emc.com/job/DPA-TRUNK-Server-Tests-AE.pack1/1018/com.emc.dpa$system-tests/testReport/
+goto end
+
+:test
+ch https://dpa-ci.lss.emc.com/job/DPA-TRUNK-Server-Tests-RA-pack2/4951/testReport/
+goto end
+
+:st
+ch https://dpa-wiki.lss.emc.com/display/DPA/Running+system+tests+from+IntelliJ+Idea
 goto end
 
 :copy3

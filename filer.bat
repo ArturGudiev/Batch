@@ -6,7 +6,8 @@ if "%1"=="" goto empty
 goto end 
 
 :EMPTY 
-start \\dpa-filer.datadomain.com\CIBuilds\dpa
+REM start \\dpa-filer.datadomain.com\CIBuilds\dpa
+start totalcmder /o  /L=\\dpa-filer.datadomain.com /R=C:\Users\gudiea\Desktop\installers\
 goto end 
 
 :LICENSES
