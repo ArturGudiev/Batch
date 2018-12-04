@@ -1,2 +1,2 @@
 @echo off
-cd %DPASVC%\bin
+cd C:\Program Files\EMC\DPA\services\bin

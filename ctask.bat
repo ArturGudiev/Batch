@@ -15,53 +15,45 @@ if "%1"=="br" goto branch
 if "%1"=="branch" goto branch
 if "%1"=="e" goto edit
 if "%1"=="ahk" goto ahk
-if "%1"=="log" goto log
-if "%1"=="r" goto remote
-if "%1"=="remote" goto remote
-if "%1"=="clear" goto clear
-if "%1"=="c" goto copy
-if "%1"=="c3" goto copy3
-if "%1"=="st" goto st
-if "%1"=="test" goto test
+if "%1"=="error" goto error
+if "%1"=="test1" goto test1
 if "%1"=="test2" goto test2
-if "%1"=="tcmd" goto tcmd
-if "%1"=="tc" goto tcmd
+if "%1"=="alert" goto alert
+if "%1"=="a" goto alert
+if "%1"=="alert" goto alert
+if "%1"=="policy" goto policy
+if "%1"=="p" goto policy
+if "%1"=="rule" goto rule
+if "%1"=="r" goto rule
 goto end
 
-:tcmd
-start totalcmder /o  /R=C:\EMC\DPA\services\applications\ /L=C:\Artur\Work\tasks\19_DPA-57628_Transaction_rolled_back_error_appears
+
+:rule
+C:\EMC\DPA\services\bin\dpa.bat ds query "SELECT f_id, enabled, policy_id from apollo.dpa.analysisrule;"
+goto end
+
+
+:policy
+C:\EMC\DPA\services\bin\dpa.bat ds query "SELECT f_id, enabled, name from apollo.dpa.analysispolicy;"
+goto end
+
+:alert
+C:\EMC\DPA\services\bin\dpa.bat ds query "SELECT f_id, message, policytype, policyid from apollo.dpa.analysisalert;"
+goto end
+
+
+:test1
+@call s
+powershell "mvn clean install -PSystemTests-AE.pack1 -DDPA.DEPLOY.DIR=C:\EMC\DPA | tee C:\Artur\temp\test1.log"
 goto end
 
 :test2
-ch https://dpa-ci.lss.emc.com/job/DPA-TRUNK-Server-Tests-AE.pack1/1018/com.emc.dpa$system-tests/testReport/
+@call s
+powershell "mvn clean install -PSystemTests-AE.pack2 -DDPA.DEPLOY.DIR=C:\EMC\DPA | tee C:\Artur\temp\test2.log"
 goto end
 
-:test
-ch https://dpa-ci.lss.emc.com/job/DPA-TRUNK-Server-Tests-RA-pack2/4951/testReport/
-goto end
-
-:st
-ch https://dpa-wiki.lss.emc.com/display/DPA/Running+system+tests+from+IntelliJ+Idea
-goto end
-
-:copy3
-ctask dir & cf dpa_3.ear
-goto end
-
-:copy
-ctask dir & cf dpa.ear
-goto end
-
-:clear
-ba & d dpa.ear* & se c
-goto end
-
-:remote
-ch https://10.98.63.224:9002/flexui
-goto end
-
-:log
-n+ C:\Artur\Work\tasks\19_DPA-57628_Transaction_rolled_back_error_appears\server.log
+:error
+n+ C:\Artur\Work\tasks\20_DPA-57758_Related_reports_from_Copy_of_Alert_rule_are_not_loaded_and_shown_in_report_section\error.txt
 goto end
 
 :edit
@@ -74,23 +66,23 @@ goto end
 
 :dir
 REM todo get c 
-cd C:\Artur\Work\tasks\19_DPA-57628_Transaction_rolled_back_error_appears
+cd C:\Artur\Work\tasks\20_DPA-57758_Related_reports_from_Copy_of_Alert_rule_are_not_loaded_and_shown_in_report_section
 goto end
 
 :full_description1
-ec DPA-57628_Transaction_rolled_back_error_appears
+ec DPA-57758_Related_reports_from_Copy_of_Alert_rule_are_not_loaded_and_shown_in_report_section
 goto end
 
 :full_description
-ec DPA-57628 Transaction rolled back error appears
+ec DPA-57758 Related reports from Copy of Alert rule are not loaded and shown in report section
 goto end
 
 :description
-ec Transaction rolled back error appears
+ec Related reports from Copy of Alert rule are not loaded and shown in report section
 goto end
 
 :TASK
-ec DPA-57628
+ec DPA-57758
 goto end
 
 :HISTORYTASK
@@ -98,7 +90,7 @@ ec :HT:
 goto end
 
 :wiki
-n+ C:\Artur\Work\tasks\19_DPA-57628_Transaction_rolled_back_error_appears\wiki.txt
+n+ C:\Artur\Work\tasks\20_DPA-57758_Related_reports_from_Copy_of_Alert_rule_are_not_loaded_and_shown_in_report_section\wiki.txt
 goto end
 
 :autohotkey 

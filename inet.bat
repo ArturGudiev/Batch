@@ -57,6 +57,11 @@ if "%1"=="ip1" goto ip1
 if "%1"=="vsphere" goto vsphere
 if "%1"=="vsp" goto vsphere
 if "%1"=="vm" goto vm
+if "%1"=="ee" goto ee
+goto end
+
+:ee
+ch https://www.jetbrains.com/help/idea/creating-and-running-your-first-java-ee-application.html
 goto end
 
 :vm

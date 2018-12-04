@@ -1,2 +1,3 @@
-@echo off 
-cd C:\Program Files\EMC\DPA\services\logs\
+@echo off
+
+cd C:\EMC\DPA\services\logs\

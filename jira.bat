@@ -29,7 +29,7 @@ start https://dpa-crucible.lss.emc.com/cru?filter=closed
 goto end
 
 :BOARD
-ch "https://jira.cec.lab.emc.com:8443/secure/RapidBoard.jspa?rapidView=984&sprint=3431"
+ch "https://jira.cec.lab.emc.com:8443/secure/RapidBoard.jspa?rapidView=984&sprint=3599"
 goto end
 
 :TASK

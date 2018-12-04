@@ -26,7 +26,7 @@ goto end
 	if "%2"=="navigate" goto edit_navigate
 	if "%2"=="nav" goto edit_navigate
 	if "%2"=="i" (start idea.lnk C:\Users\gudiea\Desktop\Hotkeys\Hotkeys.ahk & goto end)
-n+ C:\Users\gudiea\Desktop\Hotkeys\Hotkeys.ahk
+vsc C:\Users\gudiea\Desktop\Hotkeys\Hotkeys.ahk
 goto end
 
 :EDIT_NAVIGATE

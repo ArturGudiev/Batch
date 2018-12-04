@@ -260,7 +260,7 @@ if NOT "%3"=="" (
 	untitled utilities.Batch C:\Programming\Batch\%2.bat --open %3
 	goto end 
 )
-n+ C:\Programming\Batch\%2.bat
+vsc C:\Programming\Batch\%2.bat
 goto end
 
 :SCRIPT_VIM

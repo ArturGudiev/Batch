@@ -1,3 +1,2 @@
-@echo off
-
-cd C:\EMC\DPA\services\applications\
+@echo off 
+nav dpa app 
