@@ -57,7 +57,7 @@ n+ C:\Artur\Work\tasks\20_DPA-57758_Related_reports_from_Copy_of_Alert_rule_are_
 goto end
 
 :edit
-n+ %PROG%\Batch\ctask.bat
+code %PROG%\Batch\ctask.bat
 goto end 
 
 :branch

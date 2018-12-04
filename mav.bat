@@ -9,6 +9,18 @@ if "%1"=="agentbuild" goto agentbuild
 if "%1"=="ab" goto agentbuild
 if "%1"=="rf" goto rf
 if "%1"=="deploy" goto deploy
+if "%1"=="ae1" goto ae1
+if "%1"=="ae2" goto ae2
+goto end
+
+:ae1
+@call s
+mvn clean install -PSystemTests-AE.pack1 -DDPA.DEPLOY.DIR=C:\EMC\DPA
+goto end
+
+:ae2
+@call s
+mvn clean install -PSystemTests-AE.pack1 -DDPA.DEPLOY.DIR=C:\EMC\DPA
 goto end
 
 :deploy

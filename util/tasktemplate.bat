@@ -18,7 +18,7 @@ if "%1"=="ahk" goto ahk
 goto end
 
 :edit
-n+ %PROG%\Batch\ctask.bat
+code %PROG%\Batch\ctask.bat
 goto end 
 
 :branch
