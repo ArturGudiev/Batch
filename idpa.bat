@@ -114,7 +114,7 @@ goto end
 :http
 @call app -
 @call sleep 5
-@call dpa application configure --httpprotocol TRUE
+@call dpa app configure --httpprotocol TRUE
 @call app +
 @call sleep 5
 @call st

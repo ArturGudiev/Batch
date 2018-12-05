@@ -11,7 +11,7 @@ if "%1"=="hiber" goto hiber
 goto end
 
 :hiber
-sa C:\Artur\Books\1seddighi_a_spring_persistence_with_hibernate.pdf
+ch C:\Artur\Books\1seddighi_a_spring_persistence_with_hibernate.pdf
 goto end
 
 :angular

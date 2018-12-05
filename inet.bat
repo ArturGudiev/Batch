@@ -59,7 +59,9 @@ if "%1"=="vsp" goto vsphere
 if "%1"=="vm" goto vm
 if "%1"=="ee" goto ee
 if "%1"=="fr" goto flexremote
+if "%1"=="lfr" goto flexremote
 if "%1"=="rf" goto flexremote
+if "%1"=="lrf" goto flexremote
 if "%1"=="flexremote" goto flexremote
 goto end
 
