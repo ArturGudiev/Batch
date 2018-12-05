@@ -10,6 +10,11 @@ if "%1"=="ob" goto old_board
 if "%1"=="bu" goto burndown
 if "%1"=="burn" goto burndown
 if "%1"=="denis" goto denis
+if "%1"=="tk" goto tk
+goto end
+
+:tk
+ch https://jira.cec.lab.emc.com:8443/browse/DPA-%2
 goto end
 
 :denis
@@ -35,6 +40,7 @@ goto end
 :TASK
 start https://dpa-jira.lss.emc.com/browse/DPA-55326
 goto end
+
 
 :HELP
 

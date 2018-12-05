@@ -17,9 +17,19 @@ goto end
 	@call curl -s https://localhost:9002/server/status/startup-status --insecure > C:\Artur\temp\status.xml
 	REM @call xpath C:\Artur\temp\status.xml "serverStatus/status"
 	FOR /F "tokens=* USEBACKQ" %%F IN (`@call xpath C:\Artur\temp\status.xml "serverStatus/status/name"`) DO (
-	SET var=%%F
+		SET var=%%F
 	)
-	if NOT "%var%"=="UPGRADING" (ECHO 	%var%)
+	REM if "%var%"=="URL:file:///C:/Artur/temp/status.xml" (
+		REM SET var="No status"
+	REM )
+	if NOT "%var%"=="UPGRADING" (
+		if "%var%"=="URL:file:///C:/Artur/temp/status.xml" (
+			echo 	NO STATUS
+			goto repeat
+		) 
+		ECHO 	%var%
+		
+	)
 	if "%var%"=="STARTED" goto end 
 	if "%var%"=="UPGRADING" (
 		FOR /F "tokens=* USEBACKQ" %%F IN (`@call xpath C:\Artur\temp\status.xml "serverStatus/status/currentStep"`) DO (

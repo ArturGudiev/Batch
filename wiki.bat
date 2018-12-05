@@ -50,6 +50,19 @@ if "%1"=="db" goto database
 if "%1"=="en" goto english
 if "%1"=="english" goto english
 if "%1"=="e" goto english
+if "%1"=="istest" goto ideasystemtest
+if "%1"=="ideasystemtest" goto ideasystemtest
+if "%1"=="stest" goto systemtest
+if "%1"=="systest" goto systemtest
+if "%1"=="systemtest" goto systemtest
+goto end
+
+:systemtest
+ch https://confluence.cec.lab.emc.com:8443/display/DPA/Running+system+tests+from+the+command+line
+goto end
+
+:ideasystemtest
+ch https://confluence.cec.lab.emc.com:8443/display/DPA/Running+system+tests+from+IntelliJ+Idea
 goto end
 
 :english

@@ -7,6 +7,11 @@ if "%1"=="scala" goto scala
 if "%1"=="vim" goto vim
 if "%1"=="ng" goto angular
 if "%1"=="angular" goto angular
+if "%1"=="hiber" goto hiber
+goto end
+
+:hiber
+sa C:\Artur\Books\1seddighi_a_spring_persistence_with_hibernate.pdf
 goto end
 
 :angular

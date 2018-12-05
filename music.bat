@@ -12,6 +12,11 @@ if "%1"=="sana" goto sanava
 if "%1"=="sa" goto sanava
 if "%1"=="ce" goto central
 if "%1"=="central" goto central
+if "%1"=="yb" goto youngandbeatiful
+goto end
+
+:youngandbeatiful
+ch https://soundcloud.com/niksobil/lana-del-rey-young-beautiful-kevin-blank-remix
 goto end
 
 :central

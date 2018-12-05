@@ -5,10 +5,15 @@ if "%1"=="poliy" goto policy
 if "%1"=="p" goto policy
 if "%1"=="alert" goto alert
 if "%1"=="a" goto alert
+if "%1"=="all" goto all
+goto end
+
+:all
+C:\EMC\DPA\services\bin\dpa.bat ds query "SELECT * from apollo.dpa.analysisalert;"
 goto end
 
 :alert
-C:\EMC\DPA\services\bin\dpa.bat ds query "SELECT f_id, message, policytype, policyid from apollo.dpa.analysisalert;"
+C:\EMC\DPA\services\bin\dpa.bat ds query "SELECT f_id, message, policytype, policyid, severity from apollo.dpa.analysisalert order by severity;"
 goto end
 
 :policy

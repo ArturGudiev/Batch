@@ -66,7 +66,7 @@ goto end
 
 :dir
 REM todo get c 
-cd C:\Artur\Work\tasks\20_DPA-57758_Related_reports_from_Copy_of_Alert_rule_are_not_loaded_and_shown_in_report_section
+cd C:\Artur\Work\tasks\19_DPA-57628_Transaction_rolled_back_error_appears\
 goto end
 
 :full_description1
