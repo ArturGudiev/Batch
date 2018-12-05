@@ -1,4 +1,4 @@
 @echo off
 
-vim C:\EMC\DPA\services\applications\datastore-service.conf
+vim C:\EMC\DPA\services\executive\datastore-service.conf
 
