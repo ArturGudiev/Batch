@@ -70,6 +70,13 @@ if "%1"=="dl" goto delete_license
 if "%1"=="getlic" goto getlic
 if "%1"=="gl" goto getlic
 if "%1"=="update" goto update
+if "%1"=="silent_install" goto silent_install
+if "%1"=="sili" goto silent_install
+goto end
+
+:silent_install
+	set installer_dir=C:\Users\gudiea\Desktop\installers\
+	%2 -i silent -f myinstaller.properties
 goto end
 
 :update

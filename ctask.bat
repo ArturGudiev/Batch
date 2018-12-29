@@ -1,5 +1,5 @@
 @echo off
-set ctaskdir=C:\Artur\Work\tasks\25_DPA-57944_Pie_report_doesn't_reflect_autorefresh\
+
 if "%1"=="task" goto task 
 if "%1"=="t" goto task 
 
@@ -15,16 +15,16 @@ if "%1"=="br" goto branch
 if "%1"=="branch" goto branch
 if "%1"=="e" goto edit
 if "%1"=="ahk" goto ahk
-if "%1"=="desc" goto desc
-if "%1"=="desce" goto desce
+if "%1"=="de" goto de
+if "%1"=="text" goto text
 goto end
 
-:desce
-code %ctaskdir%\desc.txt
-goto end
+:text
+more  C:\Artur\Work\tasks\22_DPA-57758_Related_reports_from_Copy_of_Alert_rule_are_not_loaded_and_shown_in_report_section\text.txt
+goto end 
 
-:desc
-more %ctaskdir%\desc.txt
+:de
+asd
 goto end
 
 :edit
@@ -37,23 +37,23 @@ goto end
 
 :dir
 REM todo get c 
-cd C:\Artur\Work\tasks\25_DPA-57944_Pie_report_doesn't_reflect_autorefresh
+cd C:\Artur\Work\tasks\22_DPA-57758_Related_reports_from_Copy_of_Alert_rule_are_not_loaded_and_shown_in_report_section
 goto end
 
 :full_description1
-ec DPA-57944_Pie_report_doesn't_reflect_autorefresh
+ec DPA-57758_Related_reports_from_Copy_of_Alert_rule_are_not_loaded_and_shown_in_report_section
 goto end
 
 :full_description
-ec DPA-57944 Pie report doesn't reflect autorefresh
+ec DPA-57758 Related reports from Copy of Alert rule are not loaded and shown in report section
 goto end
 
 :description
-ec Pie report doesn't reflect autorefresh
+ec Related reports from Copy of Alert rule are not loaded and shown in report section
 goto end
 
 :TASK
-ec DPA-57944
+ec DPA-57758
 goto end
 
 :HISTORYTASK
@@ -61,7 +61,7 @@ ec :HT:
 goto end
 
 :wiki
-n+ C:\Artur\Work\tasks\25_DPA-57944_Pie_report_doesn't_reflect_autorefresh\wiki.txt
+n+ C:\Artur\Work\tasks\22_DPA-57758_Related_reports_from_Copy_of_Alert_rule_are_not_loaded_and_shown_in_report_section\wiki.txt
 goto end
 
 :autohotkey 

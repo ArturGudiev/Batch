@@ -15,7 +15,12 @@ if "%1"=="br" goto branch
 if "%1"=="branch" goto branch
 if "%1"=="e" goto edit
 if "%1"=="ahk" goto ahk
+if "%1"=="text" goto text
 goto end
+
+:text
+C:\Artur\Work\tasks\:DIR:\text.txt
+goto end 
 
 :edit
 code %PROG%\Batch\ctask.bat

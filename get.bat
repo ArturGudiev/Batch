@@ -42,6 +42,7 @@ if "%1"=="apo" goto apostrophe
 if "%1"=="apostrophe" goto apostrophe
 if "%1"=="obj" goto obj
 if "%1"=="ip" goto ip
+if "%1"=="rip" goto rip
 if "%1"=="utair" goto utair
 if "%1"=="dellnumber" goto dellnumber
 if "%1"=="megafon" goto megafon
@@ -77,6 +78,12 @@ goto end
 :commandresult
 clip_content_file.bat C:\Programming\Batch\util/commandresult.txt
 goto end
+
+
+:rip
+ec 10.98.62.166
+goto end
+
 
 :ipl
 ec https://10.41.42.5:9002

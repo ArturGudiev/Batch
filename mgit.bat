@@ -17,19 +17,38 @@ if "%1"=="l5" goto log5
 if "%1"=="log5" goto log5
 if "%1"=="acp" goto addcommitpush
 if "%1"=="addcommitpush" goto addcommitpush
+if "%1"=="c" goto checkout
+if "%1"=="ch" goto checkout
+if "%1"=="checkout" goto checkout
+if "%1"=="b" goto branch
+if "%1"=="branch" goto branch
+if "%1"=="rb" goto remote_branch
+if "%1"=="rbranch" goto remote_branch
+goto end
+
+:remote_branch
+git branch -r
+goto end
+
+:branch
+git branch
+goto end
+
+:checkout
+git checkout %2
 goto end
 
 :addcommitpush
-echo. 
+echo --
 echo --------------------- add ^& commit ---------------------
-echo.
+echo --
 @call git add --all
 @call git commit -m %2 
-echo. 
+echo --
 echo ------------------------ push ---------------------------
-echo. 
+echo --
 @call git push origin master
-echo. 
+echo -- 
 goto end
 
 :log5
