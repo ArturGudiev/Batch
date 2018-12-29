@@ -63,10 +63,26 @@ if "%1"=="lfr" goto flexremote
 if "%1"=="rf" goto flexremote
 if "%1"=="lrf" goto flexremote
 if "%1"=="flexremote" goto flexremote
+if "%1"=="stest" goto speedtest
+if "%1"=="speedtest" goto speedtest
+if "%1"=="jscomplete" goto jscomplete
+if "%1"=="speller" goto speller
+goto end
+
+:speller
+ch https://tech.yandex.ru/speller/
+goto end
+
+:jscomplete
+ch jscomplete.com/repl
+goto end
+
+:speedtest
+ch http://www.speedtest.net/
 goto end
 
 :flexremote
-ch https://10.98.63.243:9002/flexui/
+ch https://10.98.62.166:9002/flexui/
 goto end
 
 :ee
@@ -235,7 +251,7 @@ ch "https://www.tutu.ru/spb/rasp.php?st1=2181&st2=181"
 goto end 
 
 :subway
-ch http://www.metro.spb.ru/map1/route.html
+ch http://www.metro.spb.ru/uploads/img/map/metro_map2018_1700x2431.jpg
 goto end
 
 :EUROPA

@@ -24,7 +24,7 @@ goto end
 	REM )
 	if NOT "%var%"=="UPGRADING" (
 		if "%var%"=="URL:file:///C:/Artur/temp/status.xml" (
-			echo 	NO STATUS
+			echo 	NOTHING
 			goto repeat
 		) 
 		ECHO 	%var%

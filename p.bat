@@ -17,6 +17,29 @@ if "%1"=="m" goto m
 if "%1"=="pow" goto powershell
 if "%1"=="power" goto powershell
 if "%1"=="p" goto powershell
+if "%1"=="C++" goto C++
+if "%1"=="sh" goto sh
+if "%1"=="redis" goto redis
+if "%1"=="red" goto redis
+if "%1"=="re" goto redis
+if "%1"=="rea" goto react
+if "%1"=="react" goto react
+goto end
+
+:react
+cd C:\Programming\ReactNative
+goto end
+
+:redis
+cd C:\Programming\Redis
+goto end
+
+:sh
+cd C:\Programming\Shell
+goto end
+
+:C++
+cd C:\Programming\C++
 goto end
 
 :powershell

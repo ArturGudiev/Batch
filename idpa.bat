@@ -28,9 +28,7 @@ if "%1"=="s" goto stat
 
 if "%1"=="app" goto APP  
 if "%1"=="ds" goto DS  
-echo here
 if "%1"=="agent" goto AG  
-echo here2
 if "%1"=="ag" goto AG 
 
 if "%1"=="start" goto START

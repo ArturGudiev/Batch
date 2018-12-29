@@ -9,6 +9,18 @@ if "%1"=="ang" goto ang
 if "%1"=="ticket" goto ticket
 if "%1"=="inst" goto inst
 if "%1"=="mps" goto mps
+if "%1"=="request" goto request
+if "%1"=="req" goto request
+if "%1"=="gta" goto gta
+goto end
+
+:gta
+ch https://www.youtube.com/watch?v=n_FsUCChqpU&t=6223s
+goto end
+
+:request
+REM ch "https://emcesm.service-now.com/ieo/?id=sc_request&table=sc_request&sys_id=2dc5e16cdb5a6740f9095ac4dc96195a"
+ch "https://emcesm.service-now.com/ieo/?id=form&table=sc_req_item&sys_id=edc5e16cdb5a6740f9095ac4dc96195a&view=sp"
 goto end
 
 :mps

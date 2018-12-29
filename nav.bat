@@ -43,8 +43,6 @@ if "%1"=="user" goto gudiea
 if "%1"=="gudiea" goto gudiea
 if "%1"=="dpa" goto dpa
 if "%1"=="bdpa" goto bdpa
-
-
 if "%1"=="books" goto books
 if "%1"=="da" goto dairies
 if "%1"=="dairies" goto dairies
@@ -60,6 +58,29 @@ if "%1"=="doc" goto docs
 if "%1"=="docs" goto docs
 if "%1"=="tool" goto tools
 if "%1"=="tools" goto tools
+if "%1"=="or" goto oracle
+if "%1"=="oracle" goto oracle
+if "%1"=="or12" goto or12
+if "%1"=="mongo" goto mongo
+if "%1"=="triz" goto triz
+goto end
+
+:triz
+cd C:\Artur\University\TRIZ
+goto end
+
+:mongo
+cd C:\tools\mongo\
+goto end 
+
+:or12
+REM cd C:\app\gudiea\virtual\product\12.2.0\dbhome_1\network\admin"
+cd C:\app\gudiea\product\12.2.0\dbhome_1\bin\
+cc C:\app\gudiea\product\12.2.0\dbhome_1\bin\
+goto end
+
+:oracle
+cd C:\oraclexe\app\oracle\product\11.2.0\server\bin"
 goto end
 
 :tools

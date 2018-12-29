@@ -1,8 +1,5 @@
 @echo off
 
-
-set nl=^& echo.
-
 if "%1"=="asupwd" goto ApolloSuperUser
 if "%1"=="enasupwd" goto EncodeApolloSuperUserPwd
 if "%1"=="csri" goto ClusterStatusReportId
@@ -53,10 +50,36 @@ if "%1"=="ssd" goto screenshotdir
 if "%1"=="ssdir" goto screenshotdir
 if "%1"=="screenshotdir" goto screenshotdir
 if "%1"=="ipl" goto ipl
+if "%1"=="result" goto commandresult
+if "%1"=="res" goto commandresult
+if "%1"=="mongo" goto mongo
+if "%1"=="tools" goto tools
+if "%1"=="jhome" goto jhome
+if "%1"=="rvm" goto rvm
+goto end
+
+:rvm
+ec 10.98.62.166
+goto end
+
+:jhome
+cc C:\PROGRA~1\Java\JDK18~2.0_1
+goto end
+
+:tools
+cc C:\tools
+goto end
+
+:mongo
+cc mongo "mongodb+srv://cluster0-jryec.mongodb.net/test" --username user
+goto end
+
+:commandresult
+clip_content_file.bat C:\Programming\Batch\util/commandresult.txt
 goto end
 
 :ipl
-ec https://10.77.4.74:9002
+ec https://10.41.42.5:9002
 goto end
 
 :screenshotdir
@@ -64,7 +87,7 @@ ec C:\Users\gudiea\Desktop\Screen\ScreenShots
 goto end
 
 :ae
-cc æ
+cc ï¿½
 goto end
 
 :megafon
@@ -80,7 +103,8 @@ cc 1024099176
 goto end
 
 :ip
-ec 10.77.4.74
+REM ec 10.77.4.74
+ec 10.41.42.5
 goto end
 
 :obj
@@ -154,7 +178,7 @@ cc Passw0rd!
 goto end
 
 :E
-Ñ?Ñ? Ñ‘
+ï¿½?ï¿½? Ñ‘
 goto end
 
 

@@ -1,0 +1,3 @@
+@echo off
+
+db tasks %*

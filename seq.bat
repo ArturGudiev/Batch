@@ -1,4 +1,4 @@
-pr@echo off
+@echo off
 
 if "%1"=="uidev" goto uidev
 if "%1"=="ui" goto ui
@@ -25,6 +25,11 @@ if "%1"=="work" goto work
 if "%1"=="w" goto work 
 if "%1"=="artifactory" goto artifactory
 if "%1"=="arti" goto artifactory
+if "%1"=="home" goto home
+goto end
+
+:home
+app -- & dpa ds stop & close skype & close mc
 goto end
 
 :artifactory

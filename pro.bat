@@ -130,19 +130,7 @@ goto end
 
 
 :UI
-start idea.lnk C:\Src\EMC\DPA\new2\dpa-ui-html
-goto end
-
-:P63
-start idea.lnk C:\Src\EMC\DPA\6.3.0\
-goto end
-
-:P64
-start idea.lnk C:\Src\EMC\DPA\6.4.0\
-goto end
-
-:P65
-start idea.lnk C:\Src\EMC\DPA\6.5.0\
+start idea.lnk C:\Src\EMC\DPA\new2\dpa-ui-html\angular-app
 goto end
 
 :TRUNK

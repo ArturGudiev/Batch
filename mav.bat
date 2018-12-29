@@ -11,6 +11,16 @@ if "%1"=="rf" goto rf
 if "%1"=="deploy" goto deploy
 if "%1"=="ae1" goto ae1
 if "%1"=="ae2" goto ae2
+if "%1"=="mongo" goto mongo
+if "%1"=="mongo" goto mongo
+goto end
+
+:mongo
+asd
+goto end
+
+:mongo
+cd C:\tools\mongo
 goto end
 
 :ae1

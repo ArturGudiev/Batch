@@ -1,0 +1,1 @@
+FOR /F "tokens=* USEBACKQ" %%F IN (`delquotes "asd dd"`) DO (SET var=%%F)

@@ -95,15 +95,15 @@ start C:\Artur\Photos\subway.png
 goto end
 
 :autohotkey
-n+ C:\Programming\Autohotkey\%2.ahk
+code C:\Programming\Autohotkey\%2.ahk
 goto end
 
 :settings
-n+ C:\Users\gudiea\.m2\settings.xml
+code C:\Users\gudiea\.m2\settings.xml
 goto end
 
 :alias
-n+ C:\Programming\Batch\Aliases\%2.bat
+code C:\Programming\Batch\Aliases\%2.bat
 goto end
 
 
@@ -127,7 +127,7 @@ echo 	angry			- 	open angry file in artur
 goto end
 
 :UTIL
-n+ C:\Programming\Batch\util\%2.bat
+code C:\Programming\Batch\util\%2.bat
 goto end
 
 :WinProcess
@@ -210,7 +210,7 @@ goto end
 
 
 :DDATA
-n+ C:\Program Files\EMC\DPA\services\executive\datastore-service.conf
+code C:\Program Files\EMC\DPA\services\executive\datastore-service.conf
 goto end
 
 :UIDIR
@@ -222,7 +222,7 @@ start screen
 goto end
 
 :ANGRY
-n+ %ARTUR%\angry.txt
+code %ARTUR%\angry.txt
 goto end
 
 :TICKET 

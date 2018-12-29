@@ -11,6 +11,11 @@ if "%1"=="" goto EMPTY
 if "%1"=="t" goto touching
 if "%1"=="to" goto touching
 if "%1"=="touching" goto touching
+if "%1"=="triz" goto triz
+goto end
+
+:triz
+ch https://drive.google.com/drive/folders/0B7UqoJnvdTY2RERoZ0NoZzhDaWs
 goto end
 
 :touching

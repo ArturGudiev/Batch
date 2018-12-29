@@ -1,5 +1,5 @@
 @echo off
-
+set ctaskdir=C:\Artur\Work\tasks\25_DPA-57944_Pie_report_doesn't_reflect_autorefresh\
 if "%1"=="task" goto task 
 if "%1"=="t" goto task 
 
@@ -15,45 +15,16 @@ if "%1"=="br" goto branch
 if "%1"=="branch" goto branch
 if "%1"=="e" goto edit
 if "%1"=="ahk" goto ahk
-if "%1"=="error" goto error
-if "%1"=="test1" goto test1
-if "%1"=="test2" goto test2
-if "%1"=="alert" goto alert
-if "%1"=="a" goto alert
-if "%1"=="alert" goto alert
-if "%1"=="policy" goto policy
-if "%1"=="p" goto policy
-if "%1"=="rule" goto rule
-if "%1"=="r" goto rule
+if "%1"=="desc" goto desc
+if "%1"=="desce" goto desce
 goto end
 
-
-:rule
-C:\EMC\DPA\services\bin\dpa.bat ds query "SELECT f_id, enabled, policy_id from apollo.dpa.analysisrule;"
+:desce
+code %ctaskdir%\desc.txt
 goto end
 
-
-:policy
-C:\EMC\DPA\services\bin\dpa.bat ds query "SELECT f_id, enabled, name from apollo.dpa.analysispolicy;"
-goto end
-
-:alert
-C:\EMC\DPA\services\bin\dpa.bat ds query "SELECT f_id, message, policytype, policyid from apollo.dpa.analysisalert;"
-goto end
-
-
-:test1
-@call s
-powershell "mvn clean install -PSystemTests-AE.pack1 -DDPA.DEPLOY.DIR=C:\EMC\DPA | tee C:\Artur\temp\test1.log"
-goto end
-
-:test2
-@call s
-powershell "mvn clean install -PSystemTests-AE.pack2 -DDPA.DEPLOY.DIR=C:\EMC\DPA | tee C:\Artur\temp\test2.log"
-goto end
-
-:error
-n+ C:\Artur\Work\tasks\20_DPA-57758_Related_reports_from_Copy_of_Alert_rule_are_not_loaded_and_shown_in_report_section\error.txt
+:desc
+more %ctaskdir%\desc.txt
 goto end
 
 :edit
@@ -66,23 +37,23 @@ goto end
 
 :dir
 REM todo get c 
-cd C:\Artur\Work\tasks\19_DPA-57628_Transaction_rolled_back_error_appears\
+cd C:\Artur\Work\tasks\25_DPA-57944_Pie_report_doesn't_reflect_autorefresh
 goto end
 
 :full_description1
-ec DPA-57758_Related_reports_from_Copy_of_Alert_rule_are_not_loaded_and_shown_in_report_section
+ec DPA-57944_Pie_report_doesn't_reflect_autorefresh
 goto end
 
 :full_description
-ec DPA-57758 Related reports from Copy of Alert rule are not loaded and shown in report section
+ec DPA-57944 Pie report doesn't reflect autorefresh
 goto end
 
 :description
-ec Related reports from Copy of Alert rule are not loaded and shown in report section
+ec Pie report doesn't reflect autorefresh
 goto end
 
 :TASK
-ec DPA-57758
+ec DPA-57944
 goto end
 
 :HISTORYTASK
@@ -90,7 +61,7 @@ ec :HT:
 goto end
 
 :wiki
-n+ C:\Artur\Work\tasks\20_DPA-57758_Related_reports_from_Copy_of_Alert_rule_are_not_loaded_and_shown_in_report_section\wiki.txt
+n+ C:\Artur\Work\tasks\25_DPA-57944_Pie_report_doesn't_reflect_autorefresh\wiki.txt
 goto end
 
 :autohotkey 
