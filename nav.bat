@@ -63,6 +63,11 @@ if "%1"=="oracle" goto oracle
 if "%1"=="or12" goto or12
 if "%1"=="mongo" goto mongo
 if "%1"=="triz" goto triz
+if "%1"=="mine" goto mine
+goto end
+
+:mine
+cd C:\Artur\mine
 goto end
 
 :triz

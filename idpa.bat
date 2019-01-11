@@ -113,7 +113,7 @@ dir  C:\"Program Files"\EMC\DPA\services\applications\reportengine*
 goto end 
 
 :exec_app
-n+ C:\Program Files\EMC\DPA\services\executive\application-service.conf
+code C:\"Program Files"\EMC\DPA\services\executive\application-service.conf
 goto end
 
 :http

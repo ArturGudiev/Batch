@@ -12,6 +12,11 @@ if "%1"=="t" goto touching
 if "%1"=="to" goto touching
 if "%1"=="touching" goto touching
 if "%1"=="triz" goto triz
+if "%1"=="math2019" goto math2019
+goto end
+
+:math2019
+ch https://docs.google.com/presentation/d/1lySOOz_qg8AhRlox6LPOh7BA6XwxF2egxoaf7f_fNAs/edit
 goto end
 
 :triz

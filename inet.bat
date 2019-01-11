@@ -67,6 +67,21 @@ if "%1"=="stest" goto speedtest
 if "%1"=="speedtest" goto speedtest
 if "%1"=="jscomplete" goto jscomplete
 if "%1"=="speller" goto speller
+if "%1"=="phys" goto phys
+if "%1"=="physy" goto physy
+if "%1"=="plural" goto pluarl
+goto end
+
+:pluarl
+ch https://app.pluralsight.com/library/
+goto end
+
+:physy
+ch https://courses.openedu.ru/courses/course-v1:spbu+INTROP+self_paced_2018/courseware/341ebdb5811b4bd5a728e1fcbb60c91c/db69df2c0a75475888c9058a20545918/
+goto end
+
+:phys
+ch https://stepik.org/course/29755/syllabus
 goto end
 
 :speller

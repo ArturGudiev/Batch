@@ -26,6 +26,16 @@ if "%1"=="w" goto work
 if "%1"=="artifactory" goto artifactory
 if "%1"=="arti" goto artifactory
 if "%1"=="home" goto home
+if "%1"=="rser" goto remoteserver
+if "%1"=="remoteser" goto remoteserver
+goto end
+
+:remoteserver
+    @call close mc
+    @call app -- 
+    @call remote 
+    @call pro trunk 
+    REM @call rsa 
 goto end
 
 :home

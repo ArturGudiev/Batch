@@ -9,7 +9,7 @@ ch https://t.me/topfootb
 goto end
 
 :EMPTY
-
+start telegram.lnk
 goto end
 
 :END

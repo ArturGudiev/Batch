@@ -12,6 +12,11 @@ if "%1"=="mps" goto mps
 if "%1"=="request" goto request
 if "%1"=="req" goto request
 if "%1"=="gta" goto gta
+if "%1"=="oracle" goto oracle
+goto end
+
+:oracle
+ch http://www.rebellionrider.com/oracle-database-12c-tutorial/how-to-uninstall-oracle-database-12c-rebellionrider.htm#.XCeODFwzY2w
 goto end
 
 :gta

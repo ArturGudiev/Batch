@@ -15,12 +15,17 @@ if "%1"=="br" goto branch
 if "%1"=="branch" goto branch
 if "%1"=="e" goto edit
 if "%1"=="ahk" goto ahk
+if "%1"=="de" goto de
 if "%1"=="text" goto text
 goto end
 
 :text
-C:\Artur\Work\tasks\26_DPA-58072_Update_server_actions_for_multiple_dashboard_scheduled\text.txt
+more  C:\Artur\Work\tasks\22_DPA-57758_Related_reports_from_Copy_of_Alert_rule_are_not_loaded_and_shown_in_report_section\text.txt
 goto end 
+
+:de
+asd
+goto end
 
 :edit
 code %PROG%\Batch\ctask.bat
@@ -32,23 +37,23 @@ goto end
 
 :dir
 REM todo get c 
-cd C:\Artur\Work\tasks\26_DPA-58072_Update_server_actions_for_multiple_dashboard_scheduled
+cd C:\Artur\Work\tasks\22_DPA-57758_Related_reports_from_Copy_of_Alert_rule_are_not_loaded_and_shown_in_report_section
 goto end
 
 :full_description1
-ec DPA-58072_Update_server_actions_for_multiple_dashboard_scheduled
+ec DPA-57758_Related_reports_from_Copy_of_Alert_rule_are_not_loaded_and_shown_in_report_section
 goto end
 
 :full_description
-ec DPA-58072 Update server actions for multiple dashboard scheduled
+ec DPA-57758 Related reports from Copy of Alert rule are not loaded and shown in report section
 goto end
 
 :description
-ec Update server actions for multiple dashboard scheduled
+ec Related reports from Copy of Alert rule are not loaded and shown in report section
 goto end
 
 :TASK
-ec DPA-58072
+ec DPA-57758
 goto end
 
 :HISTORYTASK
@@ -56,7 +61,7 @@ ec :HT:
 goto end
 
 :wiki
-code C:\Artur\Work\tasks\26_DPA-58072_Update_server_actions_for_multiple_dashboard_scheduled\wiki.txt
+n+ C:\Artur\Work\tasks\22_DPA-57758_Related_reports_from_Copy_of_Alert_rule_are_not_loaded_and_shown_in_report_section\wiki.txt
 goto end
 
 :autohotkey 
