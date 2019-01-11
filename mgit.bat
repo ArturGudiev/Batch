@@ -24,6 +24,12 @@ if "%1"=="b" goto branch
 if "%1"=="branch" goto branch
 if "%1"=="rb" goto remote_branch
 if "%1"=="rbranch" goto remote_branch
+if "%1"=="rev" goto revert
+if "%1"=="revert" goto revert
+goto end
+
+:revert
+git chekcout .
 goto end
 
 :remote_branch
