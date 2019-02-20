@@ -1,7 +1,7 @@
 @echo off
 if "%1"=="desktop" goto desktop
 if "%1"=="desktop" goto desktop
-if "%1"=="down" goto downloads
+if "%1"=="down" ( cd C:\Users\gudiea\Downloads\ &  goto end  )
 if "%1"=="scanner" goto scanner
 if "%1"=="installers" goto installers
 if "%1"=="i" goto installers
@@ -64,6 +64,18 @@ if "%1"=="or12" goto or12
 if "%1"=="mongo" goto mongo
 if "%1"=="triz" goto triz
 if "%1"=="mine" goto mine
+if "%1"=="mom" goto mom
+if "%1"=="ss" goto screenshots
+if "%1"=="screen" goto screenshots
+if "%1"=="screenshots" goto screenshots
+goto end
+
+:screenshots
+cd C:\Users\gudiea\Desktop\Screen\ScreenShots
+goto end
+
+:mom
+cd C:\Artur\mine\Mom"
 goto end
 
 :mine

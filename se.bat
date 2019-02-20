@@ -30,67 +30,75 @@ if "%1"=="shortcuts" goto shortcuts
 if "%1"=="down" goto downloads
 if "%1"=="art" goto artur
 if "%1"=="univ" goto univ
-goto USER_PATH
+if "%1"=="ct" goto ct
+goto end
+
+:ct
+	set var=%2
+	if "%2"=="" (set var=C:\Users\gudiea)
+	echo here
+	echo %var%
+    start totalcmder /o  /L=%cd% /R=%var%
 goto end
 
 :USER_PATH
-start explorer %*
+	start explorer %*
 goto end 
 
 :univ
-start explorer C:\Artur\University
+	start explorer C:\Artur\University
 goto end
 
 :artur
-start explorer C:\Artur
+	start explorer C:\Artur
 goto end
 
 :downloads
-start explorer C:\Users\gudiea\Downloads
+	start explorer C:\Users\gudiea\Downloads
 goto end
 
 :shortcuts
-start explorer C:\Programming\Batch\Aliases\Shortcuts
+	start explorer C:\Programming\Batch\Aliases\Shortcuts
 goto end
 
 :doc
-start explorer C:\Programming\Java\JADE-all-4.5.0\doc"
+	start explorer C:\Programming\Java\JADE-all-4.5.0\doc"
 goto end
 
 :classes
-start explorer C:\Programming\Java\JADE-all-4.5.0\JADE-bin-4.5.0\jade\classes
+	start explorer C:\Programming\Java\JADE-all-4.5.0\JADE-bin-4.5.0\jade\classes
 goto end
 
 :ex
-start explorer C:\Programming\Java\JADE-all-4.5.0\examples\jade\src\examples
+	start explorer C:\Programming\Java\JADE-all-4.5.0\examples\jade\src\examples
 goto end
 
 :german
-start explorer C:\Artur\University\Deutsch
+	start explorer C:\Artur\University\Deutsch
 goto end
 
 :ProgramFiles86
-start explorer C:\Program Files (x86)
+	start explorer C:\Program Files (x86)
 goto end
 
 :ProgramFiles
-start explorer C:\Program Files
+	start explorer C:\Program Files
 goto end
 
 :aliases
-start explorer C:\Programming\Batch\Aliases
+	start explorer C:\Programming\Batch\Aliases
 goto end
 
 :EMPTY
-start explorer %*
+	start explorer %*
 goto end
 
 :downloads
-start explorer C:\Users\gudiea\Downloads
+	start explorer C:\Users\gudiea\Downloads
 goto end
 
 :EMPTY
-start explorer %*
+	start explorer %*
 goto end 
 
 :INSTALLERS
@@ -106,27 +114,27 @@ start explorer C:\Users\gudiea\Desktop\installers
 goto end
 
 :AGENTINSTALLER
-start explorer C:\Src\EMC\DPA\trunk\installer\agents\create\target
+	start explorer C:\Src\EMC\DPA\trunk\installer\agents\create\target
 goto end
 
 :installogs
-start explorer "C:\Program Files\EMC\DPA\_install"
+	start explorer "C:\Program Files\EMC\DPA\_install"
 goto end
 
 :DPA
-start explorer "C:\Program Files\EMC\DPA"
+	start explorer "C:\Program Files\EMC\DPA"
 goto end
 
 :CD
-start explorer %cd%
+	start explorer %cd%
 goto end
 
 :HOTKEYS
-se C:\Users\gudiea\Desktop\Hotkeys
+	se C:\Users\gudiea\Desktop\Hotkeys
 goto end
 
 :GUDIEA
-start explorer C:\Users\gudiea
+	start explorer C:\Users\gudiea
 goto end
 
 :END

@@ -30,6 +30,16 @@ if "%1"=="ss" goto recorder
 if "%1"=="screen" goto recorder
 if "%1"=="outlook" goto outlook
 if "%1"=="flash" goto flash
+if "%1"=="clip" goto clip
+if "%1"=="all" goto all
+goto end
+
+:all
+closeall.ahk
+goto end
+
+:clip
+    taskkill /im ClipboardMaster.exe /F
 goto end
 
 :flash

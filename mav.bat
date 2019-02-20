@@ -13,6 +13,18 @@ if "%1"=="ae1" goto ae1
 if "%1"=="ae2" goto ae2
 if "%1"=="mongo" goto mongo
 if "%1"=="mongo" goto mongo
+if "%1"=="dev" goto dev
+if "%1"=="bui" goto build_ui
+if "%1"=="buildui" goto build_ui
+goto end
+
+:build_ui
+mvn clean install -Dmaven.test.skip=true -PBuildUI
+goto end
+
+:dev
+    echo mvn clean install -Dmaven.test.skip=true -Pdeveloper-mode
+    mvn clean install -Dmaven.test.skip=true -Pdeveloper-mode
 goto end
 
 :mongo

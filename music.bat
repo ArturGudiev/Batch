@@ -13,6 +13,11 @@ if "%1"=="sa" goto sanava
 if "%1"=="ce" goto central
 if "%1"=="central" goto central
 if "%1"=="yb" goto youngandbeatiful
+if "%1"=="carter" goto carter
+goto end
+
+:carter
+start C:\Artur\Music\Carter_Burwell_-_Dressingfor_Death.mp3
 goto end
 
 :youngandbeatiful

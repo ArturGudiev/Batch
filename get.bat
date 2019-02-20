@@ -45,6 +45,8 @@ if "%1"=="ip" goto ip
 if "%1"=="rip" goto rip
 if "%1"=="utair" goto utair
 if "%1"=="dellnumber" goto dellnumber
+if "%1"=="number" goto dellnumber
+if "%1"=="badge" goto dellnumber
 if "%1"=="megafon" goto megafon
 if "%1"=="ae" goto ae
 if "%1"=="ssd" goto screenshotdir
@@ -57,6 +59,44 @@ if "%1"=="mongo" goto mongo
 if "%1"=="tools" goto tools
 if "%1"=="jhome" goto jhome
 if "%1"=="rvm" goto rvm
+if "%1"=="udir" goto userdir
+if "%1"=="user" goto userdir
+if "%1"=="ba" goto ba
+if "%1"=="bdir" goto bdir
+if "%1"=="bbdir" goto bbdir
+if "%1"=="" goto empty
+if "%1"=="ss" goto screenshots
+if "%1"=="screen" goto screenshots
+if "%1"=="screenshot" goto screenshots
+if "%1"=="pf2" goto pf2
+goto end
+
+:pf2
+cc C:\PROGRA~1
+goto end
+
+:screenshots
+cc C:\Users\gudiea\Desktop\Screen\ScreenShots
+goto end
+
+:EMPTY 
+	echo nothing to get
+goto end 
+
+:bbdir
+	cc C:\Program_Files\EMC\DPA\services\
+goto end
+
+:bdir
+	cc C:\EMC\DPA\services\
+goto end
+
+:ba
+cc C:\EMC\DPA\services\applications\
+goto end
+
+:userdir
+cc C:\Users\gudiea
 goto end
 
 :rvm

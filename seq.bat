@@ -28,6 +28,15 @@ if "%1"=="arti" goto artifactory
 if "%1"=="home" goto home
 if "%1"=="rser" goto remoteserver
 if "%1"=="remoteser" goto remoteserver
+if "%1"=="server" goto server
+if "%1"=="ser" goto server
+goto end
+
+:server
+    @call close mc
+    @call pro trunk 
+    @call ch https://localhost:9002
+    @app ++ 
 goto end
 
 :remoteserver
@@ -47,12 +56,17 @@ n+ C:\Users\gudiea\.m2\settings.xml & ch https://dpa-mvn.lss.emc.com/artifactory
 goto end
 
 :work 
-@call hk 
-@call close mc 
-REM @call far 
-@call tm 
-pro trunk 
-REM ch https://localhost:9002
+    echo. 
+    echo    Start Autohotkey,Outlook and Skype for Business
+    @call hk 
+    REM @call close mc 
+    REM @call tm
+    @call wiki css 
+    @call mail w
+    @call skype
+    
+    echo. 
+    echo    Finished.
 goto end 
 
 :angular
@@ -151,17 +165,17 @@ goto end
 start pro ui
 start cmd /K "bb && dpa app start && exit"
 start cmd /K "o uid && npm start"
-start chrome https://localhost:3030/
+start chrome https://localhost:4200/
 goto end
 
 
 :UI
-@call start cmd /K "app + && exit"
+@call start cmd /K "app ++ && exit"
 @call start cmd /K "o uid && npm start"
 @call pro ui
-@call hk
+REM @call hk
 REM timeout 200
-@call start chrome https://localhost:3030/
+@call start chrome https://localhost:4200/
 goto end
 
 :END

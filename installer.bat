@@ -1,18 +1,21 @@
 @echo off
 
+set INSTALLER_DIR=C:\Users\gudiea\Desktop\installers
 
-REM if "%1"=="s" goto blank
-REM cd %DPASRC%/installer/server
-REM goto end
+if "%1"=="silent" goto silent
+if "%1"=="sil" goto silent
+if "%1"=="s" goto silent
+if "%1"=="st" goto silent_track
+goto end
 
-REM if "%1"=="a" goto blank
-REM cd %DPASRC%/installer/agents
-REM goto end
+:silent
+    %INSTALLER_DIR%\last.exe -i silent -f myinstaller.properties
+goto end
 
-REM if "%1"=="ag" goto blank
-REM cd %DPASRC%/installer/agents-git
-REM goto end
+:silent_track
+    start @call bbsize 
+    %INSTALLER_DIR%\last.exe -i silent -f myinstaller.properties
+goto end
 
-cd %DPASRC%/installer
 
-REM :END
+:END 

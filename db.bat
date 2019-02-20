@@ -155,7 +155,7 @@ mpsql "SELECT * FROM calendar order by date;"
 goto end
 
 :defpol
-    mpsql "INSERT INTO calendar (date, self) values (TO_DATE('%2/2018', 'DD/MM/YYYY'), false);" 
+    mpsql "INSERT INTO calendar (date, self) values (TO_DATE('%2/2019', 'DD/MM/YYYY'), false);" 
 goto end
 
 :POL

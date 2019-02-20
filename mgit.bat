@@ -9,7 +9,7 @@ if "%1"=="2" goto po
 if "%1"=="ac" goto addcommit
 if "%1"=="1" goto addcommit
 if "%1"=="addcommit" goto addcommit
-if "%1"=="m" goto message
+if "%1"=="message" goto message
 if "%1"=="l" goto log
 if "%1"=="log" goto log
 if "%1"=="ll" goto log5
@@ -26,6 +26,26 @@ if "%1"=="rb" goto remote_branch
 if "%1"=="rbranch" goto remote_branch
 if "%1"=="rev" goto revert
 if "%1"=="revert" goto revert
+if "%1"=="remote_checkout" goto remote_checkout
+if "%1"=="remc" goto remote_checkout
+if "%1"=="rc" goto remote_checkout
+if "%1"=="curbr" goto cur_branch
+if "%1"=="" goto cur_branch
+if "%1"=="cb" goto cur_branch
+if "%1"=="master" goto master
+if "%1"=="m" goto master
+goto end
+
+:master
+git checkout master
+goto end
+
+:cur_branch
+git branch
+goto end
+
+:remote_checkout
+git -c core.quotepath=false -c log.showSignature=false checkout -b %2 origin/%2 --
 goto end
 
 :revert
@@ -48,8 +68,8 @@ goto end
 echo --
 echo --------------------- add ^& commit ---------------------
 echo --
-@call git add --all
-@call git commit -m %2 
+    @call git add --all
+    @call git commit -m %2 
 echo --
 echo ------------------------ push ---------------------------
 echo --

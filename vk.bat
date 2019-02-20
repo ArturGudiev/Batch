@@ -19,6 +19,11 @@ if "%1"=="token" goto token
 if "%1"=="atoken" goto atoken
 if "%1"=="u" goto unread
 if "%1"=="unread" goto unread
+if "%1"=="leva" goto leva
+goto end
+
+:leva
+ch https://vk.com/im?media=&sel=80493853
 goto end
 
 :unread

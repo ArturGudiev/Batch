@@ -72,6 +72,17 @@ if "%1"=="gl" goto getlic
 if "%1"=="update" goto update
 if "%1"=="silent_install" goto silent_install
 if "%1"=="sili" goto silent_install
+if "%1"=="path" goto path
+if "%1"=="svc" goto path
+if "%1"=="images" goto images
+goto end
+
+:images
+
+goto end
+
+:path
+	powershell "& ""C:\Programming\PowerShell\path.ps1"""
 goto end
 
 :silent_install
@@ -295,8 +306,10 @@ goto end
 	SET DIR=%CD%
 	if "%2"=="+" goto APP_START
 	if "%2"=="++" goto APP_START_PF
+	if "%2"=="++r" goto APP_START_PF_STA
 	if "%2"=="-" goto APP_STOP
 	if "%2"=="--" goto APP_STOP_PF
+	if "%2"=="--s" goto APP_STOP_PF_SILENT
 	if "%2"=="r" goto APP_RESTART
 	:APP_START_PF
 		echo starting application in program files
@@ -307,6 +320,16 @@ goto end
 		st
 		cd %DIR%
 	goto end
+
+	:APP_START_PF_STA
+		@call bb
+		@call dpa app start
+		@call sta r
+		timeout 1
+		@call st
+		@call cd %DIR%
+		@call sta r
+	goto end 
 	
 		:APP_STOP_PF
 		echo stoping application in program files
@@ -315,6 +338,12 @@ goto end
 		timeout 1
 		st
 		SET DIR=%CD%
+
+		:APP_STOP_PF_SILENT
+		SET DIR=%CD%
+		@call bb 
+		dpa app stop > nul
+		cd %DIR%
 	goto end
 	
 	:APP_RESTART

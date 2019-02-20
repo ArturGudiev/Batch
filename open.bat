@@ -66,6 +66,7 @@ if "%1"=="util" goto util
 if "%1"=="--help" goto HELP
 
 if "%1"=="u" goto util
+if "%1"=="uv" goto util_vim
 if "%1"=="util" goto util
 
 if "%1"=="a" goto autohotkey
@@ -73,6 +74,7 @@ if "%1"=="autohotkey" goto autohotkey
 
 if "%1"=="alias" goto alias
 if "%1"=="al" goto alias
+if "%1"=="alv" goto alias_vim
 if "%1"=="a" goto alias
 if "%1"=="settings" goto settings
 if "%1"=="subway" goto subway
@@ -106,6 +108,9 @@ goto end
 code C:\Programming\Batch\Aliases\%2.bat
 goto end
 
+:alias_vim
+vim C:\Programming\Batch\Aliases\%2.bat
+goto end
 
 
 
@@ -128,6 +133,10 @@ goto end
 
 :UTIL
 code C:\Programming\Batch\util\%2.bat
+goto end
+
+:UTIL_VIM
+@call vim C:\Programming\Batch\util\%2.bat
 goto end
 
 :WinProcess

@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "ceeabb9c-bccf-496b-b4a5-3fe13aa662cb",
+		"name": "UNASSIGN_POLICY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POLICY UNASSIGN",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Serverg0d!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "administrator",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.emc.apollo-v1+xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:9002/dpa-api/nodes/8ad04346-9abd-4466-8bd8-05306b63519d/analysispolicy/fec34be1-2460-4f5a-99d8-8f9392f43fb6",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"dpa-api",
+						"nodes",
+						"8ad04346-9abd-4466-8bd8-05306b63519d",
+						"analysispolicy",
+						"fec34be1-2460-4f5a-99d8-8f9392f43fb6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

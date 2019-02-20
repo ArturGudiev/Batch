@@ -15,6 +15,25 @@ if "%1"=="ap" goto apollo
 if "%1"=="apollo" goto apollo
 if "%1"=="m" goto modules
 if "%1"=="modules" goto modules
+if "%1"=="r" goto root
+if "%1"=="root" goto root
+if "%1"=="f" goto flexui
+if "%1"=="flex" goto flexui
+if "%1"=="flexui" goto flexui
+if "%1"=="te" goto tests
+if "%1"=="tests" goto tests
+goto end
+
+:tests
+cd C:\Src\EMC\DPA\html-ui-automation-tests
+goto end
+
+:flexui
+cd C:\Src\EMC\DPA\flexui
+goto end
+
+:root
+cd C:\Src\EMC\DPA
 goto end
 
 :modules

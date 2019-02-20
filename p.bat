@@ -24,6 +24,12 @@ if "%1"=="red" goto redis
 if "%1"=="re" goto redis
 if "%1"=="rea" goto react
 if "%1"=="react" goto react
+if "%1"=="py" goto python
+if "%1"=="python" goto python
+goto end
+
+:python
+cd C:\Programming\Python
 goto end
 
 :react

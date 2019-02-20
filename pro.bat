@@ -27,11 +27,20 @@ if "%1"=="181" goto v181
 if "%1"=="here" goto here
 if "%1"=="todo" goto todo
 if "%1"=="sports" goto sports
+if "%1"=="at" goto test
+if "%1"=="autotest" goto test
+if "%1"=="uitest" goto test
 if "%1"=="test" goto test
+if "%1"=="flexui" goto flexui
+if "%1"=="f" goto flexui
+goto end
+
+:flexui
+start idea.lnk C:\Src\EMC\DPA\flexui
 goto end
 
 :test
-start idea.lnk C:\Src\EMC\DPA\html-ui-automation-tests"
+	start idea.lnk C:\Src\EMC\DPA\html-ui-automation-tests
 goto end
 
 :sports
@@ -51,7 +60,8 @@ start idea.lnk C:\Src\EMC\DPA\18.1.0\
 goto end 
 
 :ui
-start idea.lnk C:\Src\EMC\DPA\ui\html-ui\
+REM start idea.lnk C:\Src\EMC\DPA\ui\html-ui\
+start webstorm.lnk C:\Src\EMC\DPA\ui\html-ui\angular-app
 goto end
 
 :mobiledsl

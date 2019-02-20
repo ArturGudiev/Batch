@@ -10,13 +10,21 @@ if "%1"=="des" goto description
 if "%1"=="description" goto description
 if "%1"=="fd" goto full_description
 if "%1"=="fd1" goto full_description1
+
 if "%1"=="dir" goto dir
+if "%1"=="gd" goto getdir
+if "%1"=="dirt" goto dirtotalcmder
+
 if "%1"=="br" goto branch
 if "%1"=="branch" goto branch
 if "%1"=="e" goto edit
 if "%1"=="ahk" goto ahk
 if "%1"=="text" goto text
 goto end
+
+:getdir 
+cc C:\Artur\Work\tasks\:DIR:
+goto end 
 
 :text
 C:\Artur\Work\tasks\:DIR:\text.txt
@@ -33,6 +41,10 @@ goto end
 :dir
 REM todo get c 
 cd C:\Artur\Work\tasks\:DIR:
+goto end
+
+:dirtotalcmder
+tcmder C:\Artur\Work\tasks\:DIR: %2
 goto end
 
 :full_description1

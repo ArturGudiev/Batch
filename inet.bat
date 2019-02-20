@@ -70,6 +70,22 @@ if "%1"=="speller" goto speller
 if "%1"=="phys" goto phys
 if "%1"=="physy" goto physy
 if "%1"=="plural" goto pluarl
+if "%1"=="map" goto map
+if "%1"=="l4" goto l4
+if "%1"=="ozon" goto ozon
+goto end
+
+:ozon
+ch https://www.ozon.ru/context/orderlist/
+goto end
+
+:l4
+ch https://localhost:4200
+goto end
+
+:map
+ch https://yandex.ru/maps/2/saint-petersburg/?ll=30.348495%2C59.911344^&mode=search^&sll=30.344929%%2C59.956647^&sspn=0.577812%%2C0.158747^&text="%2"^&z=13
+REM ch https://www.google.com/maps/search/%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F+%D1%80%D0%B5%D0%BA%D0%B8+%D0%A4%D0%BE%D0%BD%D1%82%D0%B0%D0%BD%D0%BA%D0%B8,+Saint+Petersburg,+Russia/@59.8774442,29.8186012,15z
 goto end
 
 :pluarl
@@ -253,7 +269,7 @@ ch http://habrahabr.ru
 goto end
 
 :timetable
-ch https://timetable.spbu.ru/MATH/StudentGroupEvents/Primary/13712
+ch https://timetable.spbu.ru/MATH/StudentGroupEvents/Primary/17982
 goto end
 
 :TRAIN1

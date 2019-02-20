@@ -1,3 +1,3 @@
 @echo off
 
-get c 
+get c %*
