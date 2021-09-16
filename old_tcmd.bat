@@ -5,7 +5,7 @@ if "%1"=="app" goto app
 goto end
 
 :app
-start totalcmder /o  
+start totalcmder /o
 goto end
 
 :EMPTY

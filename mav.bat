@@ -2,6 +2,7 @@
 
 if "%1"=="install" goto install
 if "%1"=="i" goto install
+if "%1"=="p" goto package
 if "%1"=="r" goto referinstall
 if "%1"=="ri" goto referinstall
 if "%1"=="referiinstall" goto referinstall
@@ -21,6 +22,10 @@ goto end
 :build_ui
 mvn clean install -Dmaven.test.skip=true -PBuildUI
 goto end
+
+:package
+    mvn clean package -Dmaven.test.skip=true
+goto end 
 
 :dev
     echo mvn clean install -Dmaven.test.skip=true -Pdeveloper-mode

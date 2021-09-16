@@ -15,18 +15,22 @@ if "%1"=="p" goto portuguese
 if "%1"=="edit" goto edit
 if "%1"=="e" goto edit
 
-start %DESKTOP%\Hotkeys\Hotkeys.ahk
+if "%1"=="ek" goto edit_kotlin
+
+start C:\Programming\Autohotkey\Hotkeys\Hotkeys.ahk
 goto end
 
 :portuguese
-
 goto end 
 
 :EDIT
 	if "%2"=="navigate" goto edit_navigate
 	if "%2"=="nav" goto edit_navigate
-	if "%2"=="i" (start idea.lnk C:\Users\gudiea\Desktop\Hotkeys\Hotkeys.ahk & goto end)
-code C:\Users\gudiea\Desktop\Hotkeys\Hotkeys.ahk
+code C:\Programming\Autohotkey\Hotkeys\Hotkeys.ahk
+goto end
+
+:edit_kotlin
+code C:\Programming\Autohotkey\Hotkeys\Hotkeys_Kotlin.ahk
 goto end
 
 :EDIT_NAVIGATE

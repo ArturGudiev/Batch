@@ -8,19 +8,31 @@ if "%1"=="discussion" goto discussion
 if "%1"=="discussion" goto discussion
 if "%1"=="d" goto discussion
 if "%1"=="dir" goto dir
-if "%1"=="others" goto others
-if "%1"=="shi" goto shindarev
-if "%1"=="raf" goto raf
-if "%1"=="raf1" goto raf1
-if "%1"=="raf2" goto raf2
-if "%1"=="gal" goto gal
-if "%1"=="val" goto val
-if "%1"=="tar" goto tar
-if "%1"=="tar1" goto tar1
-if "%1"=="tar2" goto tar2
-if "%1"=="po" goto printothers
 if "%1"=="home" goto home
-if "%1"=="diag" goto diag
+if "%1"=="table" goto table
+if "%1"=="tar" goto tar
+if "%1"=="pres" goto pres
+
+goto end
+
+:pres
+start C:\Artur\University\Managment\3\Upravlenie_izmeneniami_v2.pdf
+goto end 
+
+:raf
+ch C:\Artur\University\Managment\2\2_raf.pdf
+goto end
+
+:tar
+ch C:\Artur\University\Managment\3\tar.pdf
+goto end
+
+:mar
+ch C:\Artur\University\Managment\2\2_mar.pdf
+goto end
+
+:table
+ch https://docs.google.com/spreadsheets/d/1yqU9l0fSxS92gkDoTSenu3JQemYflIRAnU7LAoAJaoM/edit#gid=1759048971
 goto end
 
 :diag
@@ -40,56 +52,16 @@ goto end
     echo        Tarasova tar 
 goto end
 
-:tar2
-ch https://vk.com/doc29046511_493135221?hash=a7f35f56cb9815132a&dl=e04f99aec87b766140
-goto end
-
-:tar1
-ch https://vk.com/doc29046511_493135211?hash=3976079b264eab67a3&dl=a8330d37dd6a624e29
-goto end
-
-:tar
-ch https://vk.com/doc29046511_493135184?hash=3c0f1c648e30dc3212&dl=18fe500cdc2430337e
-goto end
-
-:val
-ch https://vk.com/doc37620214_491983437?hash=e720d169b347f70d96&dl=9e07c773318c5185fe
-goto end
-
-:gal
-ch https://vk.com/doc19197026_492402714?hash=8cca5c9535399b4caa&dl=5de58b31489cd3b3ba
-goto end
-
-:raf2
-ch https://vk.com/doc12759910_492530792?hash=391256c2037c848eec&dl=faa6504394cc1bcde1
-goto end
-
-:raf1
-ch https://vk.com/doc12759910_492530785?hash=263630ea02b18669b1&dl=035a95d42c5fdc323c
-goto end
-
-:raf
-start C:\Artur\University\Managment\others\raf.pdf
-goto end
-
-:shindarev
-ch "https://vk.com/doc6408999_491584111?hash=497d7de3976241404a&dl=ff4a8c4e870d91ed56"
-goto end
-
-:others
-cd C:\Artur\University\Managment\others
-goto end
-
 :dir
 cd C:\Artur\University\Managment
 goto end
 
 :discussion
-ch https://vk.com/topic-170783355_39831712
+ch https://vk.com/topic-170783355_39863620
 goto end
 
 :task
-start C:\Artur\University\Managment/task.pdf
+code C:\Artur\University\Managment\3\task.txt
 goto end
 
 :go

@@ -68,7 +68,7 @@ ec :HT:
 goto end
 
 :wiki
-n+ C:\Artur\Work\tasks\:DIR:\wiki.txt
+code C:\Artur\Work\tasks\:DIR:\wiki.txt
 goto end
 
 :autohotkey 

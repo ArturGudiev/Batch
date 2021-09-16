@@ -6,6 +6,7 @@ if "%1"=="63" goto p63
 if "%1"=="64" goto p64
 if "%1"=="65" goto p65
 if "%1"=="trunk" goto trunk
+if "%1"=="un" goto untitled
 if "%1"=="untitled" goto untitled
 if "%1"=="stat" goto stat
 
@@ -23,6 +24,7 @@ if "%1"=="cont" goto controller
 if "%1"=="vol" goto volunteer
 if "%1"=="dsl" goto mobiledsl
 if "%1"=="ui" goto ui
+if "%1"=="uic" goto uicode
 if "%1"=="181" goto v181
 if "%1"=="here" goto here
 if "%1"=="todo" goto todo
@@ -48,7 +50,7 @@ start idea.lnk C:\Programming\Angular\SportsStore\
 goto end
 
 :todo
-start idea.lnk C:\Programming\Angular\todo"
+start idea.lnk C:\Programming\Angular\todo
 goto end
 
 :here
@@ -138,9 +140,16 @@ goto end
 start idea.lnk C:\Programming\Java\untitled\
 goto end
 
-
 :UI
 start idea.lnk C:\Src\EMC\DPA\new2\dpa-ui-html\angular-app
+goto end
+
+:UICODE
+echo uicode 
+	set c=%cd%
+	@call o uid 
+	start code .
+	cd %c%
 goto end
 
 :TRUNK

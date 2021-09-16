@@ -55,6 +55,12 @@ if "%1"=="ideasystemtest" goto ideasystemtest
 if "%1"=="stest" goto systemtest
 if "%1"=="systest" goto systemtest
 if "%1"=="systemtest" goto systemtest
+if "%1"=="sharepoint" goto sharepoint
+if "%1"=="share" goto sharepoint
+goto end
+
+:sharepoint
+ch "https://confluence.cec.lab.emc.com:8443/pages/viewpage.action?spaceKey=DPA&title=Testing+with+SharePoint+in+the+DPA+lab"
 goto end
 
 :systemtest
@@ -185,7 +191,7 @@ ch https://confluence.cec.lab.emc.com:8443/spaces/viewspace.action?key=~gudiea
 goto end
 
 :UI
-n+ C:\Artur\Wiki\DPA\ui.txt
+ch https://confluence.cec.lab.emc.com:8443/display/DPA/HTML5+UI+-+HOWTO
 goto end
 
 :COMVAULT

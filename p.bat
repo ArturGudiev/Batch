@@ -26,6 +26,11 @@ if "%1"=="rea" goto react
 if "%1"=="react" goto react
 if "%1"=="py" goto python
 if "%1"=="python" goto python
+if "%1"=="node" goto node
+goto end
+
+:node
+cd C:\Programming\NodeJS
 goto end
 
 :python

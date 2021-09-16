@@ -69,6 +69,11 @@ if "%1"=="ss" goto screenshots
 if "%1"=="screen" goto screenshots
 if "%1"=="screenshot" goto screenshots
 if "%1"=="pf2" goto pf2
+if "%1"=="dparip" goto dparip
+goto end
+
+:dparip
+ec https://10.98.62.166:9002/
 goto end
 
 :pf2

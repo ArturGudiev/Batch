@@ -1,7 +1,9 @@
 @echo off
 if "%1"=="" goto EMPTY
 if "%1"=="dpa" goto dpa 
+if "%1"=="fui" goto fui
 if "%1"=="ui" goto ui
+if "%1"=="cui" goto cui
 if "%1"=="dpa" goto dpa
 if "%1"=="restc" goto restclasses
 if "%1"=="restclasses" goto restclasses
@@ -30,8 +32,19 @@ goto end
     cd C:\Src\EMC\DPA\trunk\server\dpa-parent\dpa-ejb\dpa-ear\target\
 goto end
 
-:ui
+:fui
     cd C:\Src\EMC\DPA\trunk\ui\dpaui-war\target
+goto end
+
+:ui
+    cd C:\Src\EMC\DPA\ui\html-ui\html5-ui-war\target\
+goto end
+
+:cui
+    set dir=%CD%
+    cd C:\Src\EMC\DPA\ui\html-ui\html5-ui-war\target\
+    cf html5-ui-war-19.1.0-SNAPSHOT.war
+
 goto end
 
 :dpa_old

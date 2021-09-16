@@ -1,0 +1,2 @@
+@echo off
+inet.bat %*

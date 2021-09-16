@@ -20,17 +20,27 @@ if "%1"=="branch" goto branch
 if "%1"=="e" goto edit
 if "%1"=="ahk" goto ahk
 if "%1"=="text" goto text
-if "%1"=="dpr" goto daninpullrequest
-if "%1"=="daninpr" goto daninpullrequest
-if "%1"=="shot" goto screenshot
-if "%1"=="sh" goto screenshot
-if "%1"=="ss" goto screenshot
-if "%1"=="ss2" goto screenshot2
-if "%1"=="qcdir" goto qcdir
-if "%1"=="qcd" goto qcdir
-if "%1"=="reports" goto reports
-if "%1"=="r" goto reports
 if "%1"=="clean" goto clean
+if "%1"=="tn" goto testname
+if "%1"=="gb" goto getbranch
+if "%1"=="lt" goto lasttest
+if "%1"=="qcd" goto qc d
+goto end
+
+:qcd
+start C:\Artur\Work\tasks\33_DPA-58584_Create_auto-tests_for_Publish_Settings_Modal\Publish-settings.doc
+goto end 
+
+:lasttest
+ec ScheduledReportsDialogTests#defaultStateOfSaveAsScheduledReportWithReportTemplate
+goto end
+
+:getbranch
+ec feature/DPA-58396-Create-Scheduled-Report-modal
+goto end
+
+:testname
+ec ScheduledReportsDialogTests
 goto end
 
 :clean
@@ -40,34 +50,15 @@ goto end
     @call node C:\Programming\NodeJS\requests\schedules.js
     @call node C:\Programming\NodeJS\requests\custom_group.js
     @call node C:\Programming\NodeJS\requests\sites.js
-goto end
-
-:reports
-start C:\Artur\Work\tasks\31_DPA-58396_Create_auto-tests_for_Create_Scheduler_Report_dialog\reports.png
-goto end
-
-:qcdir
-cd C:\Artur\Work\tasks\31_DPA-58396_Create_auto-tests_for_Create_Scheduler_Report_dialog\KatyaQC"
-goto end
-
-:screenshot2
-start C:\Artur\Work\tasks\31_DPA-58396_Create_auto-tests_for_Create_Scheduler_Report_dialog\createScheduledReport2.png
-goto end
-
-:screenshot
-start C:\Artur\Work\tasks\31_DPA-58396_Create_auto-tests_for_Create_Scheduler_Report_dialog\CreateScheduledReport.png
-goto end
-
-:daninpullrequest
-ch https://dpa-stash.lss.emc.com/projects/DPA/repos/html-ui-automation-tests/pull-requests/46/overview
+    @call node C:\Programming\NodeJS\requests\users.js
 goto end
 
 :getdir 
-cc C:\Artur\Work\tasks\31_DPA-58396_Create_auto-tests_for_Create_Scheduler_Report_dialog
+cc C:\Artur\Work\tasks\33_DPA-58584_Create_auto-tests_for_Publish_Settings_Modal
 goto end 
 
 :text
-C:\Artur\Work\tasks\31_DPA-58396_Create_auto-tests_for_Create_Scheduler_Report_dialog\text.txt
+C:\Artur\Work\tasks\33_DPA-58584_Create_auto-tests_for_Publish_Settings_Modal\text.txt
 goto end 
 
 :edit
@@ -80,35 +71,35 @@ goto end
 
 :dir
 REM todo get c 
-cd C:\Artur\Work\tasks\31_DPA-58396_Create_auto-tests_for_Create_Scheduler_Report_dialog
+cd C:\Artur\Work\tasks\33_DPA-58584_Create_auto-tests_for_Publish_Settings_Modal
 goto end
 
 :dirtotalcmder
-tcmder C:\Artur\Work\tasks\31_DPA-58396_Create_auto-tests_for_Create_Scheduler_Report_dialog %2
+tcmder C:\Artur\Work\tasks\33_DPA-58584_Create_auto-tests_for_Publish_Settings_Modal %2
 goto end
 
 :full_description1
-ec DPA-58396_Create_auto-tests_for_Create_Scheduler_Report_dialog
+ec DPA-58584_Create_auto-tests_for_Publish_Settings_Modal
 goto end
 
 :full_description
-ec DPA-58396 Create auto-tests for Create Scheduler Report dialog
+ec DPA-58584 Create auto-tests for Publish Settings Modal
 goto end
 
 :description
-ec Create auto-tests for Create Scheduler Report dialog
+ec Create auto-tests for Publish Settings Modal
 goto end
 
 :TASK
-ec DPA-58396
+ec DPA-58584
 goto end
 
 :HISTORYTASK
-ec DPA-56196
+ec DPA-58382
 goto end
 
 :wiki
-n+ C:\Artur\Work\tasks\31_DPA-58396_Create_auto-tests_for_Create_Scheduler_Report_dialog\wiki.txt
+code C:\Artur\Work\tasks\33_DPA-58584_Create_auto-tests_for_Publish_Settings_Modal\wiki.txt
 goto end
 
 :autohotkey 

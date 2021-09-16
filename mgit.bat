@@ -34,6 +34,26 @@ if "%1"=="" goto cur_branch
 if "%1"=="cb" goto cur_branch
 if "%1"=="master" goto master
 if "%1"=="m" goto master
+if "%1"=="ser" goto server
+if "%1"=="server" goto server
+goto end
+
+:addcommitpush
+echo --
+echo --------------------- add ^& commit ---------------------
+echo --
+    @call git add --all
+    @call git commit -m %2 
+echo --
+echo ------------------------ push ---------------------------
+echo --
+@call git push origin master
+echo -- 
+goto end
+
+
+:server
+git remote show origin | grep Fetch
 goto end
 
 :master
@@ -62,19 +82,6 @@ goto end
 
 :checkout
 git checkout %2
-goto end
-
-:addcommitpush
-echo --
-echo --------------------- add ^& commit ---------------------
-echo --
-    @call git add --all
-    @call git commit -m %2 
-echo --
-echo ------------------------ push ---------------------------
-echo --
-@call git push origin master
-echo -- 
 goto end
 
 :log5

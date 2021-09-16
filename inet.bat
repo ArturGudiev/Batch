@@ -1,7 +1,7 @@
 @echo off
 
 if "%1"=="clarity" goto clarity
-if "%1"=="cl" goto clarity
+if "%1"=="cl" goto clockify
 if "%1"=="europa" goto europa
 if "%1"=="eu" goto europa
 if "%1"=="euro" goto europa
@@ -73,6 +73,43 @@ if "%1"=="plural" goto pluarl
 if "%1"=="map" goto map
 if "%1"=="l4" goto l4
 if "%1"=="ozon" goto ozon
+if "%1"=="pipeline" goto pipeline
+if "%1"=="pl" goto pipeline
+if "%1"=="pipeline2" goto pipeline2
+if "%1"=="pl2" goto pipeline2
+if "%1"=="testhelp" goto testhelp
+if "%1"=="westcall" goto westcall
+if "%1"=="lf" goto localflex
+if "%1"=="sh" goto sharepoint
+goto end
+
+:clockify
+ch https://clockify.me/tracker
+goto end 
+
+:sharepoint
+    ch http://dpavqwinsp2013.datadomain.com/sites/demo/SitePages/Home.aspx
+goto end 
+
+:localflex
+ch https://localhost:9002/flexui
+goto end
+
+:westcall
+ch console.westhome.spb.ru
+goto end
+
+:testhelp
+ch http://maven.apache.org/plugins-archives/maven-surefire-plugin-2.12.4/examples/single-test.html
+goto end
+
+:pipeline2
+REM ch "https://dpavblxjenkins2.datadomain.com/view/QA%%20UI%%20Aut/job/QAUI_01_HTML_TESTS_PIPELINE_CUSTOMTESTS/build?delay=0sec"
+ch "https://dpavblxjenkins2.datadomain.com/view/QA%%20UI%%20Aut/job/QAUI_01_HTML_TESTS_PIPELINE_CUSTOMTESTS/"
+goto end
+
+:pipeline
+ch "https://dpavblxjenkins2.datadomain.com/view/QA%%20UI%%20Aut/job/QAUI_01_HTML_TESTS_PIPELINE/"
 goto end
 
 :ozon
